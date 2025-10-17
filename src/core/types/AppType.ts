@@ -9,3 +9,10 @@ type TCountry = {
     alpha3Code: string
     callingCodes: string[]
 }
+
+type TMenuItem = {
+    name: string
+    linkTo: string
+    icon: string
+    parent: string
+}

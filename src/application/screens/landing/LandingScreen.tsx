@@ -29,7 +29,7 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                 <div className="minor-btn" style={{
                     borderRadius: "50px",
                     border: "2px solid #ffffff",
-                    width: "20%",
+                    width: "25%",
                     textAlign: "center"
                 }}>
                     <span>CONTACT US</span>
@@ -40,7 +40,7 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                 <div className="minor-btn" style={{
                     borderRadius: "50px",
                     border: "2px solid #ffffff",
-                    width: "20%",
+                    width: "25%",
                     textAlign: "center"
                 }}>
                     <span>CONTACT US</span>
@@ -51,7 +51,7 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                 <div className="minor-btn" style={{
                     borderRadius: "50px",
                     border: "2px solid #ffffff",
-                    width: "20%",
+                    width: "25%",
                     textAlign: "center"
                 }}>
                     <span>CONTACT US</span>
