@@ -37,6 +37,69 @@ header {
     z-index: 100;
 }
 
+header .overlay-menu-indisplay {
+    display: block !important;
+}
+
+header .overlay-menu ul {
+    margin: 0 !important;
+}
+
+header .overlay-menu ul li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+header .overlay-menu ul li:hover {
+    color: #ffffff !important;
+}
+
+header .overlay-menu ul li a span:first-child {
+    display: inline-flex;
+}
+
+header .overlay-menu ul li:hover .image-background-container {
+    border: 2px solid #ffffff;
+}
+
+header .app-header-menu .overlay-menu ul {
+    display: grid !important;
+}
+
+header .app-header-menu .overlay-menu ul a {
+    font-size: 13px;
+}
+
+header .app-header-menu .overlay-menu ul li a:hover i,
+header .app-header-menu .overlay-menu ul li a:hover {
+    color: #202020 !important;
+}
+
+header .app-header-menu .overlay-menu ul {
+    top: unset !important;
+}
+
+header .app-header-menu .overlay-menu ul li {
+    margin: 0;
+}
+
+header .overlay-menu {
+    position: absolute;
+    background: #e53324;
+    top: 84px;
+    cursor: pointer;
+    display: none;
+    transition: all .5s;
+}
+
+header .home-dropdown {
+    position: absolute;
+    top: 10%;
+    z-index: 100;
+    background-color: #e53324;
+    width: 15%;
+}
+
 header .app-header-content {
     display: flex;
     width: 100%;
@@ -53,7 +116,7 @@ header .app-header-menu ul {
 }
 
 header .app-header-content .app-header-logo img {
-    width: 17%;
+    width: 23%;
     position: fixed;
     top: 0;
     z-index: 100;
@@ -109,7 +172,7 @@ header .app-header-menu ul li a:hover {
 
 header .app-header-content .app-header-logo {
     display: grid;
-    width: 50%;
+    width: 40%;
 }
 
 header .app-header-content .app-header-logo small {
@@ -244,7 +307,7 @@ section .main-container .our-programs-area h1 {
 section .main-container .subscription,
 section .main-container .the-reasons,
 section .main-container .area-programs {
-    width: 70%;
+    width: 85%;
     margin: 0 auto;
     justify-content: center;
 }
