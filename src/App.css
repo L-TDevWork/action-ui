@@ -126,6 +126,64 @@ header .app-header-menu .app-btn-donate:hover span {
     color: red !important;
 }
 
+footer {
+    background-color: #e61914;
+    padding: 10px;
+}
+
+footer .footer-content {
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+footer .footer-content .footer-section fieldset {
+    width: 70%;
+}
+
+footer .footer-content .footer-section ul {
+    width: 45%;
+    margin: 10px;
+}
+
+footer .footer-content .footer-section ul li {
+    list-style-type: none;
+
+}
+
+footer .footer-content .footer-section ul li a {
+    color: #ffffff;
+}
+
+footer .footer-content .footer-section ul li a:hover {
+    text-decoration: none;
+    color: #202020;
+}
+
+footer .footer-content .footer-section fieldset select {
+    border: 0;
+    border-radius: 0;
+
+}
+
+footer .footer-content .footer-section {
+    width: 30%;
+    margin: 10px;
+}
+
+footer .footer-content .footer-section h4 {
+    color: #ffffff;
+    font-weight: bolder;
+    padding: 10px;
+    border-bottom: 1px dotted #ffffff;
+}
+
+.copyrights {
+    background-color: #202020;
+    padding: 10px;
+    color: #ffffff;
+}
+
 section .main-container {
     width: 100%;
     margin: 0 auto;
@@ -168,21 +226,56 @@ section .main-container .our-programs-area {
     text-align: center;
 }
 
+section .main-container .subscription .red-border,
+section .main-container .the-chosen-areas .red-border,
 section .main-container .our-programs-area .red-border {
     position: relative;
     left: 50%;
     transform: translate(-50%, 0%);
 }
 
+section .main-container .subscription h1,
+section .main-container .the-chosen-areas h1,
 section .main-container .our-programs-area h1 {
     font-weight: bold;
     text-align: center;
 }
 
+section .main-container .subscription,
+section .main-container .the-reasons,
 section .main-container .area-programs {
     width: 70%;
     margin: 0 auto;
     justify-content: center;
+}
+
+section .main-container .subscription .form-fields {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section .main-container .subscription .form-fields fieldset input,
+section .main-container .subscription .form-fields fieldset select {
+    width: 100%;
+}
+
+section .main-container .subscription .subs-form .btn-subs {
+    background-color: red;
+    margin: 10px;
+    padding: 10px;
+    width: 20%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+section .main-container .subscription .subs-form .btn-subs span {
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+section .main-container .subscription .form-fields fieldset {
+    margin: 10px;
 }
 
 section .main-container .area-programs .program {
@@ -191,12 +284,33 @@ section .main-container .area-programs .program {
     margin: 20px;
 }
 
+section .main-container .the-reasons .pie,
+section .main-container .the-reasons .more-reasons {
+    width: 45%;
+    margin: 10px;
+}
+
+section .main-container .the-reasons .read-more {
+    width: 20%;
+
+}
+
+section .main-container .the-reasons .why-container {
+    margin: 10px 0 10px 0;
+}
+
+section .main-container .the-reasons .why-container h4 {
+    font-weight: bolder;
+}
+
 section .main-container .area-programs .program .read-more {
     width: 30%;
     margin: 0 auto;
 }
 
+section .main-container .the-reasons .read-more span,
 section .main-container .area-programs .program .read-more span {
     font-size: 13px;
     color: #ffffff;
+    font-weight: bolder;
 }
