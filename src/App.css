@@ -289,6 +289,7 @@ section .main-container .our-programs-area {
     text-align: center;
 }
 
+section .blog-container .blog-content .red-border,
 section .main-container .subscription .red-border,
 section .main-container .the-chosen-areas .red-border,
 section .main-container .our-programs-area .red-border {
@@ -297,6 +298,7 @@ section .main-container .our-programs-area .red-border {
     transform: translate(-50%, 0%);
 }
 
+section .blog-container .blog-content h1,
 section .main-container .subscription h1,
 section .main-container .the-chosen-areas h1,
 section .main-container .our-programs-area h1 {
@@ -304,6 +306,7 @@ section .main-container .our-programs-area h1 {
     text-align: center;
 }
 
+section .blog-container .blog-content,
 section .main-container .subscription,
 section .main-container .the-reasons,
 section .main-container .area-programs {
@@ -374,6 +377,53 @@ section .main-container .area-programs .program .read-more {
 section .main-container .the-reasons .read-more span,
 section .main-container .area-programs .program .read-more span {
     font-size: 13px;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+section .blog-container .blog-content .blogs-area {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section .blog-container .blog-content .blogs-area .blog {
+    width: 30%;
+    background: whitesmoke;
+    box-shadow: 1px 1px 1px #cccccc;
+    display: grid;
+    margin: 5px;
+    overflow: hidden;
+    position: relative;
+    height: 350px;
+}
+
+section .blog-container .blog-content .blogs-area .blog h4 {
+    background: #ffffff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 1px 1px 1px #cccccc;
+    font-weight: bolder;
+    font-size: 17px;
+}
+
+section .blog-container .blog-content .blogs-area .blog p {
+    padding: 10px;
+}
+
+section .blog-container .blog-content .blogs-area .btn-read-more {
+    background: red;
+    width: 45%;
+    margin: 10px auto;
+    text-align: center;
+    height: 25px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    cursor: pointer;
+}
+
+section .blog-container .blog-content .blogs-area .btn-read-more span {
     color: #ffffff;
     font-weight: bolder;
 }

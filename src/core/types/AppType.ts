@@ -16,3 +16,10 @@ type TMenuItem = {
     icon: string
     parent: string
 }
+
+
+type TBlog = {
+    heading: string
+    message: string
+    subMessage: string
+}
