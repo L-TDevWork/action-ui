@@ -2,6 +2,7 @@ import { type JSX } from "react";
 import { useNavigate } from "react-router-dom";
 import { Blogs } from "../../../core/constants/Constants";
 import { useAppContext } from "../../../core/context/AppContext";
+import { ContentCard } from "../../../infrastructure/shared/contentcard/ContentCard";
 
 export const BlogScreen: React.FC<{}> = (): JSX.Element => {
     const navigate = useNavigate();
@@ -25,13 +26,7 @@ export const BlogScreen: React.FC<{}> = (): JSX.Element => {
             <br />
             <div className="blogs-area">
                 {Blogs?.map((blog: TBlog, index: number) => {
-                    return <div key={index} className="blog">
-                        <h4>{blog?.heading}</h4>
-                        <p>{blog?.subMessage}</p>
-                        <div onClick={() => toggleBlogArticle(blog)} className="btn-read-more">
-                            <span>Read More</span>
-                        </div>
-                    </div>
+                    return <ContentCard Content={blog} key={index} toggleBlogArticle={toggleBlogArticle} />
                 })}
             </div>
             <div className="blogs-view-area"></div>
