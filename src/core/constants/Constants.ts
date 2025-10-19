@@ -71,3 +71,17 @@ export const Blogs: TBlog[] = [
         subMessage: `Youth unemployment is one of the biggest social injustices of our time. It affects young people from all walks of life – informal street sellers on the streets`
     }
 ];
+
+export const DonationOptions: TDonationOption[] = [
+    {
+        value: 150,
+        message: [`R150 Ensures 2 girls can attend after school programmes on self -development.`]
+    }, {
+        value: 300,
+        message: [`Donate R300 monthly to support young girls and womxn confronted by many social ills.`,
+            `Spark a Smile and change a child’s life.`]
+    }, {
+        value: 600,
+        message: [`Join us to stand against exploitation of human rights & environment! Donate R600 monthly to support.`]
+    }
+]
