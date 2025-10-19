@@ -433,3 +433,44 @@ section .blog-container .blog-content .blogs-area .btn-read-more span {
     color: #ffffff;
     font-weight: bolder;
 }
+
+.donations-pannel {
+    position: fixed;
+    width: 20%;
+    right: 0;
+    box-shadow: 0px 0px 0px 1px #cccccc;
+    height: 100%;
+    z-index: 100;
+    top: 0;
+    background-color: whitesmoke;
+}
+
+.donations-pannel .btn-direct-debit {
+    background-color: #e53324;
+    padding: 10px;
+    text-align: center;
+    width: 95%;
+}
+
+.donations-pannel .btn-direct-debit span {
+    color: #ffffff;
+    text-align: center;
+}
+
+.donations-pannel .pannel-footer:hover,
+.donations-pannel .btn-direct-debit:hover {
+    background-color: #e7005c;
+    color: #cccccc;
+}
+
+.donations-pannel .pannel-footer {
+    background-color: #e53324;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10%;
+}
+
+.donations-pannel .pannel-footer span {
+    font-size: 11px;
+    color: #ffffff;
+}

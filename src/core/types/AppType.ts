@@ -32,3 +32,8 @@ type TBlog = {
     subMessage: string
     image?: boolean
 }
+
+type TDonationOption = {
+    value: number 
+    message: string[] 
+}
