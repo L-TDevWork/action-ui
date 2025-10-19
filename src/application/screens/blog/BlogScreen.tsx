@@ -2,6 +2,7 @@ import { type JSX } from "react";
 import { useNavigate } from "react-router-dom";
 import { Blogs } from "../../../core/constants/Constants";
 import { useAppContext } from "../../../core/context/AppContext";
+import { RedBoarder } from "../../../infrastructure/shared/redborder/RedBoarder";
 
 export const BlogScreen: React.FC<{}> = (): JSX.Element => {
     const navigate = useNavigate();
@@ -16,13 +17,7 @@ export const BlogScreen: React.FC<{}> = (): JSX.Element => {
     return <div className="blog-container" style={{ marginTop: "10%" }}>
         <div className="blog-content">
             <h1>Blog</h1>
-            <div className="red-border" style={{
-                border: "2px solid red",
-                width: 100,
-                display: "flex",
-                justifyContent: "center"
-            }}></div>
-            <br />
+           <RedBoarder/>
             <div className="blogs-area">
                 {Blogs?.map((blog: TBlog, index: number) => {
                     return <div key={index} className="blog">

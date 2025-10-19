@@ -288,7 +288,8 @@ section .main-container .our-programs-area {
     padding: 20px;
     text-align: center;
 }
-
+section .meet-the-team-container .team-content .red-border, 
+section .story-details-container .story-content .red-border, 
 section .blog-container .blog-content .red-border,
 section .main-container .subscription .red-border,
 section .main-container .the-chosen-areas .red-border,
@@ -297,6 +298,8 @@ section .main-container .our-programs-area .red-border {
     left: 50%;
     transform: translate(-50%, 0%);
 }
+section .meet-the-team-container .team-content h1,
+section .story-details-container .story-content h1,
 
 section .blogs-view-container .blog-view h1,
 section .blog-container .blog-content h1,
@@ -306,12 +309,16 @@ section .main-container .our-programs-area h1 {
     font-weight: bold;
     text-align: center;
 }
+section .meet-the-team-container .team-content, 
+section .story-details-container .story-content,
+section .blog-container .blog-content, 
 
 section .blogs-view-container .blog-view,
 section .blog-container .blog-content,
 section .main-container .subscription,
 section .main-container .the-reasons,
-section .main-container .area-programs {
+section .main-container .area-programs 
+{
     width: 85%;
     margin: 0 auto;
     justify-content: center;
@@ -434,6 +441,156 @@ section .blog-container .blog-content .blogs-area .btn-read-more span {
     font-weight: bolder;
 }
 
+
+.meet-the-team-container {
+  margin-top: 10%;
+  padding: 0 2rem;
+}
+
+.team-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.team-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.team-content p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.devider {
+  width: 100%;
+  height: 2px;
+  background: red;
+  margin: 2rem 0;
+  border-radius: 2px;
+  animation: slideGlow 2s infinite alternate;
+}
+
+.image-section {
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.top-images,
+.bottom-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.image-item {
+  width: 240px;
+  text-align: center;
+}
+
+.image-heading {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.image-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+
+
+
+
+.body-wrapper {
+  font-family: Arial, sans-serif;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.story-card {
+  background: #f9f9f9;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.story-content {
+  padding: 1rem;
+}
+
+.story-content h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.story-content p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #d52b1e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+    width: 100%;
+    margin: 10% auto;
+}
 .donations-pannel {
     position: fixed;
     width: 20%;

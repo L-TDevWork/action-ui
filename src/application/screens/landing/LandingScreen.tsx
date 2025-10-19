@@ -1,6 +1,5 @@
 import { useEffect, useState, type JSX } from "react"
 import { SlideShow } from "../../../infrastructure/shared/slideshow/SlideShow";
-
 import YUWImage from "../../../assets/images/YUW-2-150x150.png";
 import NaturalImage from "../../../assets/images//naturalresources.jpg";
 import CEWImage from "../../../assets/images/Untitled-design-150x150.png";
