@@ -1,6 +1,7 @@
 import "./App.css";
 import "./SlideShow.css";
 
+
 // prime faces
 import type { JSX } from "react";
 
