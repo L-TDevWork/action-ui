@@ -1,11 +1,12 @@
 import type { JSX } from "react";
-import { useAppContext } from "../../../core/context/AppContext";
+
+import { SorryNoJob } from "./blogs/SorryNoJob";
+import { YouthCourage } from "./blogs/YouthCourage";
+import { TotalShutDown } from "./blogs/TotalShutDown";
+import { BlogTwoMessage } from "./blogs/BlogTwoMessage";
 import { BlogOneMessage } from "./blogs/BlogOneMessage";
 import { BlogThreeMessage } from "./blogs/BlogThreeMessage";
-import { BlogTwoMessage } from "./blogs/BlogTwoMessage";
-import { SorryNoJob } from "./blogs/SorryNoJob";
-import { TotalShutDown } from "./blogs/TotalShutDown";
-import { YouthCourage } from "./blogs/YouthCourage";
+import { useAppContext } from "../../../core/context/AppContext";
 
 export const BlogView: React.FC<{}> = (): JSX.Element => {
     const { ActiveBlog } = useAppContext();
