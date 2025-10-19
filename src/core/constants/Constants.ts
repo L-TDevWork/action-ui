@@ -1,3 +1,4 @@
+
 export const HomeDropDownOptions: TMenuItem[] = [
     {
         name: "Vision & Mission",
@@ -85,3 +86,82 @@ export const DonationOptions: TDonationOption[] = [
         message: [`Join us to stand against exploitation of human rights & environment! Donate R600 monthly to support.`]
     }
 ]
+
+export const PressReleases: TBlog[] = [
+    {
+        heading: `Generation  Gender South Africa to launch a GBV app to combat the scourge of Gender Based-Violence and Femicide (GBVF) in South Africa.`,
+        message: ``,
+        date: `14 March 2025`,
+        withAddedComp: true,
+        author: `Sifiso Dladla`,
+        image: true,
+        imageCaption: ``,
+        subMessage: `14 March 2025 The Generation Gender (GenG) program is launching a new ground breaking app to assist with case monitoring regarding GBVF. Generation G, known as Gen G, is a coalition between ActionAid South Africa, Activate Change Drivers, and Sonke Gender Justice....`
+    }, {
+        heading: `ActionAid Responds to Tornado Devastation in oTongaat KZN`,
+        date: `15 July 2024`,
+        message: `In a world where grassroots activism fuels social change, the stories of Nonstikelelo Khunju, Duduzile Xaba, Mbalizethu Khumalo, Freedom Nonkululeko Mtshali, and Selokela Molamodi stand out as powerful testimonies of resilience and impact. These inspiring members of the Young Urban Women movement, in collaboration with Sonke Gender Justice and ActionAid, are not just changing their communities—they are redefining the narrative of empowerment and justice. Join us as we delve into their journeys, celebrating their achievements and exploring the transformative power of grassroots activism that continues to shape a better, more equitable world.`,
+        withAddedComp: true,
+        author: ``,
+        image: true,
+        headerImage: ``,
+        subMessage: `15 July 2024 For Immediate Release ActionAid, in Partnership with City Hope, Provides Critical Support to Tornado-Stricken Magwaveni Community On the 3rd of June 2024, the community of Magwaveni in oThongati was devastated by a powerful tornado, leaving many residents...`
+    }, {
+        heading: `Xenophobia Statement`,
+        withAddedComp: true,
+        author: ``,
+        image: false,
+        headerImage: ``,
+        message: ``,
+        subMessage: `With only 13 months since the national march against gender-based violence last year. The country is once again heading for a standstill regarding`
+    },
+    {
+        heading: `LGBTIAQ activists push back`,
+        message: ``,
+        withAddedComp: true,
+        author: ``,
+        image: true,
+        headerImage: ``,
+        subMessage: `Despite having one of the most progressive legal frameworks in the world, as well as South Africa being a leader on sexuality gender identity rights`
+    }, {
+        heading: `Press Release to the President`,
+        message: ``,
+        author: ``,
+        withAddedComp: true,
+        image: false,
+        headerImage: ``,
+        subMessage: `strengthening the functioning of various specialised units such as the Family Violence, Child Protection,Sexual Offences Units,improving`
+    }, {
+        heading: `I Define Me Press Release`,
+        message: ``,
+        author: ``,
+        withAddedComp: true,
+        image: false,
+        headerImage: ``,
+        subMessage: `You are hereby invited to attend a Youth Day Speak Out in Bonteheuwel on June 16. With the flare up of Violence in the Cape Flats we are in a war zone.`
+    }, {
+        heading: `Girls’ Club Conference`,
+        message: ``,
+        author: ``,
+        withAddedComp: true,
+        image: false,
+        headerImage: ``,
+        subMessage: `As the South Africa Council for Educators (Sace), the regulatory body for teachers, meet with provincial education departments next week to`
+    }, {
+        heading: `Courts of Young womxn`,
+        message: ``,
+        author: ``,
+        withAddedComp: true,
+        image: false,
+        headerImage: ``,
+        subMessage: `Economic insecurity is at the heart of the thriving of precarious work that is taken up by most young black womxn. Youth unemployment in South Africa.`
+    }, {
+        heading: `Courts of womxn Press Release`,
+        message: ``,
+        author: ``,
+        withAddedComp: true,
+        image: false,
+        headerImage: ``,
+        subMessage: `ActionAid South Africa wishes to invite you to attend the Young Women’s Assembly scheduled to take place in Johannesburg on 15 August 2019`
+    }
+];

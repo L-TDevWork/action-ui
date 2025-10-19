@@ -40,7 +40,7 @@ export const AppFooter: React.FC<{}> = (): JSX.Element => {
                                 <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>Our Team</small></NavLink></li>
                                 <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>Where We Work</small></NavLink></li>
                                 <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>Work With Us</small></NavLink></li>
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>Press Release</small></NavLink></li>
+                                <li><NavLink to="/press-release"><GetIcon iconName="bi bi-house" />&nbsp;<small>Press Release</small></NavLink></li>
                                 <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>Publications</small></NavLink></li>
                             </ul>
                         </div>

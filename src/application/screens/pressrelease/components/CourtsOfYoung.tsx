@@ -1,0 +1,11 @@
+import type { JSX } from "react";
+
+export const CourtsOfYoung: React.FC<{ Image?: boolean, Caption?: string }> = (): JSX.Element => {
+    return <div className="blog-message">
+        <p>Economic insecurity is at the heart of the thriving of precarious work that is taken up by most young black womxn. Youth unemployment in South Africa has reached crisis level with one in three young person between 15 and 35 years unemployed. The growing economic insecurity by young womxn is seen demonstrated by high levels of unemployment, rising job insecurity, increasingly precarious forms of employment, declining access to basic public services and the inability to exercise full citizenship rights.</p>
+        <p>These factors coupled with the current patriarchal structures, societal norms and values create an enabling environment for young womxn to remain vulnerable and opportunity for varying forms of abuse and violence against them can thrive in their pursuit of economic access. With the adoption of the ILO convention by SA in June 2019.Young womxn who work in the informal economy where their labor is not subject to social regulation or protection, puts them at a greater risk of exploitation, denial of benefits and safe working conditions, or other injustices. This poses an opportune moment to reflect on how these challenges faced by our young womxn can be addressed,</p>
+        <p>To mark the start of Women’s month this year Action Aid South Africa will be hosting a Courts of womxn (Lekgotla la Barwetsana) event on the 1st of August 2019. The event will be a hearing/debate where young womxn from all walks of life will be invited to engage with a panel of representatives from various government departments and civil rights organizations. Young womxn will be submitting their demands in the aim of ensuring that their voices are captured by South Africa for the code of Good Practice in the legislation for them to be protected in the workplace against any form of sexual harassment.</p>
+        <p>On the day the young will also be launching the Young womxn Manifesto which aims to hold duty barriers accountable to their demands AASA invites you comrades, partners and members of the media to join us as we build towards a more just and equitable society.</p>
+    </div>
+
+}

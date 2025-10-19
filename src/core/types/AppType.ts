@@ -24,6 +24,8 @@ type TAppContext = {
 }
 
 type TBlog = {
+    date?: string
+    headerImage?: string
     withAddedComp?: boolean
     heading: string
     author?: string
@@ -34,6 +36,6 @@ type TBlog = {
 }
 
 type TDonationOption = {
-    value: number 
-    message: string[] 
+    value: number
+    message: string[]
 }
