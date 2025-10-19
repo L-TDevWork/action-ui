@@ -298,6 +298,7 @@ section .main-container .our-programs-area .red-border {
     transform: translate(-50%, 0%);
 }
 
+section .blogs-view-container .blog-view h1,
 section .blog-container .blog-content h1,
 section .main-container .subscription h1,
 section .main-container .the-chosen-areas h1,
@@ -306,6 +307,7 @@ section .main-container .our-programs-area h1 {
     text-align: center;
 }
 
+section .blogs-view-container .blog-view,
 section .blog-container .blog-content,
 section .main-container .subscription,
 section .main-container .the-reasons,
@@ -313,6 +315,10 @@ section .main-container .area-programs {
     width: 85%;
     margin: 0 auto;
     justify-content: center;
+}
+
+section .blogs-view-container .blog-view ol {
+    margin: 20px;
 }
 
 section .main-container .subscription .form-fields {

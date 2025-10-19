@@ -26,26 +26,44 @@ export const Blogs: TBlog[] = [
     {
         heading: `PERSPECTIVE: Multi-faceted response to GBV in mining communities.`,
         message: ``,
+        withAddedComp: true,
+        author: `Sifiso Dladla`,
+        image: true,
+        imageCaption: `Participants at one of our camps in October.`,
         subMessage: `Sifiso Dladla ActionAid's involvement in GBV Training in Mining-Affected Communities aligns with its commitment to social justice, gender equity, and empowering marginalized groups. Gender-Based Violence (GBV) often intensifies in mining areas due to socio-economic...`
     }, {
         heading: `Empowering Voices: Celebrating the Impact of Young Urban Women Activists`,
-        message: ``,
+        message: `In a world where grassroots activism fuels social change, the stories of Nonstikelelo Khunju, Duduzile Xaba, Mbalizethu Khumalo, Freedom Nonkululeko Mtshali, and Selokela Molamodi stand out as powerful testimonies of resilience and impact. These inspiring members of the Young Urban Women movement, in collaboration with Sonke Gender Justice and ActionAid, are not just changing their communities—they are redefining the narrative of empowerment and justice. Join us as we delve into their journeys, celebrating their achievements and exploring the transformative power of grassroots activism that continues to shape a better, more equitable world.`,
+        withAddedComp: false,
+        author: ``,
+        image: true,
         subMessage: `In a world where grassroots activism fuels social change, the stories of Nonstikelelo Khunju, Duduzile Xaba, Mbalizethu Khumalo, Freedom Nonkululeko Mtshali, and Selokela Molamodi stand out as powerful testimonies of resilience and impact. These inspiring members of...`
     }, {
         heading: `Man can’t be feminist`,
+        withAddedComp: true,
+        author: ``,
         message: ``,
         subMessage: `Growing up in Diepkloof in Soweto where I spent a lot of my childhood and teenage years in the family of 15 children in my grandmother’s house.`
     }, {
         heading: `Sorry, no job`,
         message: ``,
+        withAddedComp: true,
+        author: `Mbuso Ngubane`,
+        image: false,
         subMessage: `I went to visit a group of young people who we work with in Orange Farm under Activista . My heart felt into cracks when me and the Activista`
     }, {
         heading: `Empowering the Future: ActionAid South Africa’s Young Urban Women’s Feminist Economy Manifesto`,
         message: ``,
+        author: ``,
+        withAddedComp: true,
+        image: true,
         subMessage: `Introduction: Women, particularly those who experience multiple forms of discrimination, bear a disproportionate amount of the burden in a world where economic systems frequently fail both people and the planet. ActionAid South Africa recognizes this and is gearing up...`
     }, {
-        heading: `Total Shutdown by Zandi`,
+        heading: `Total Shutdown`,
         message: ``,
+        author: `Zandi`,
+        withAddedComp: true,
+        image: false,
         subMessage: `I recall leaving the meeting excited over the planned activities (Total shutdown, Intimate partner violence, awareness on working with disabilities`
     }, {
         heading: `Youth courage`,
