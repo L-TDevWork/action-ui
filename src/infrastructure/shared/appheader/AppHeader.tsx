@@ -58,8 +58,8 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
                 <div className="app-header-menu" style={{ display: "flex" }}>
                     <ul>
                         <li><NavLink onClick={() => toggleNavDropDown("home")} to="#"><GetIcon iconName="bi bi-house" />&nbsp;<small>Home <i className="bi bi-chevron-down"></i></small></NavLink></li>
-                        <li><NavLink to="#"><GetIcon iconName="bi bi-microsoft-teams" />&nbsp;<small>Meet the Team </small></NavLink></li>
-                        <li><NavLink to="/"><GetIcon iconName="bi bi-journal-richtext" />&nbsp;<small>Stories</small></NavLink></li>
+                        <li><NavLink to="/meet-the-team"><GetIcon iconName="bi bi-microsoft-teams" />&nbsp;<small>Meet the Team </small></NavLink></li>
+                        <li><NavLink to="/stories"><GetIcon iconName="bi bi-journal-richtext" />&nbsp;<small>Stories</small></NavLink></li>
                         <li><NavLink onClick={() => toggleNavDropDown("involved")} to="#"><GetIcon iconName="bi bi-bezier" />&nbsp;<small>Get Involved <i className="bi bi-chevron-down"></i></small></NavLink></li>
                         <li><NavLink to="#"><GetIcon iconName="bi bi-collection-play-fill" />&nbsp;<small>Media Room </small></NavLink></li>
                     </ul>
