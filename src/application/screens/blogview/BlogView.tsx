@@ -16,6 +16,7 @@ export const BlogView: React.FC<{}> = (): JSX.Element => {
             <h4 className="font-bold">{ActiveBlog?.heading}</h4>
             <h6 className={ActiveBlog?.author ? 'flex' : 'hidden'}>Authored By: <span className="font-bold">&nbsp;{ActiveBlog?.author}</span></h6>
             <br />
+            
             {ActiveBlog?.heading?.indexOf("PERSPECTIVE: Multi-faceted response to GBV in mining communities.") > -1 &&
                 <BlogOneMessage
                     Image={ActiveBlog?.image}
