@@ -18,8 +18,22 @@ type TMenuItem = {
 }
 
 
+type TAppContext = {
+    ActiveBlog: TBlog
+    setActiveBlog: (blog: TBlog) => void
+}
+
 type TBlog = {
+    withAddedComp?: boolean
     heading: string
+    author?: string
+    imageCaption?: string
     message: string
     subMessage: string
+    image?: boolean
+}
+
+type TDonationOption = {
+    value: number 
+    message: string[] 
 }
