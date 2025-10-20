@@ -9,6 +9,12 @@ import { MeetTheTeam } from "../../application/screens/meettheteam/MeetTheTeam";
 import { LandingScreen } from "../../application/screens/landing/LandingScreen";
 import { PressRelease } from "../../application/screens/pressrelease/PressRelease";
 import { PressReleaseView } from "../../application/screens/pressreleaseview/PressReleaseView";
+import { PublicationsScreen } from "../../application/screens/publications/PublicationsScreen";
+import { PublicationViewScreen } from "../../application/screens/publicationsview/PublicationsViewScreen";
+import { VisionMissionScreen } from "../../application/screens/visionmission/VisionMissionScreen";
+import { WhereWeWorkScreen } from "../../application/screens/wherewework/WhereWeWorkScreen";
+import { StrategicPrioritiesScreen } from "../../application/screens/strategicpriorities/StrategicPrioritiesScreen";
+import { ProgrammeApproach } from "../../application/screens/programapproach/ProgrammeApproach";
 
 
 export const AppNavigation: React.FC<{}> = (): JSX.Element => (
@@ -20,9 +26,15 @@ export const AppNavigation: React.FC<{}> = (): JSX.Element => (
         <Route element={<Stories />} path="/stories" />
         <Route element={<StoryDetail />} path="/stories/:id" />
         <Route element={<MeetTheTeam />} path="/meet-the-team" />
-        <Route element={<BlogView />} path="/blog-view/:name"></Route>
+        <Route element={<BlogView />} path="/blog-view/:name" />
         <Route element={<PressRelease />} path="/press-release" />
+        <Route element={<WhereWeWorkScreen />} path="/where-we-work" />
+        <Route element={<PublicationsScreen />} path="/publications" />
+        <Route element={<VisionMissionScreen />} path="/vision-mission" />
+        <Route element={<PublicationViewScreen />} path="/publication/:name" />
         <Route element={<PressReleaseView />} path="/press-release-view/:name" />
+        <Route element={<StrategicPrioritiesScreen />} path="/strategic-priorities" />
+        <Route element={<ProgrammeApproach />} path="/programme-approach" />
       </Route>
     </Routes>
   </BrowserRouter>

@@ -29,19 +29,18 @@ export const AppFooter: React.FC<{}> = (): JSX.Element => {
                         <div className="footer-links flex justify-between">
                             <ul className="w-[45%] m-2">
                                 <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>Home</small></NavLink></li>
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>About Us</small></NavLink></li>
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>Blog</small></NavLink></li>
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>Stories</small></NavLink></li>
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>Donate</small></NavLink></li>
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>Contact Us</small></NavLink></li>
+                                <li><NavLink to="/home"><GetIcon iconName="bi bi-file-break-fill" />&nbsp;<small>About Us</small></NavLink></li>
+                                <li><NavLink to="/blog"><GetIcon iconName="bi bi-journal-album" />&nbsp;<small>Blog</small></NavLink></li>
+                                <li><NavLink to="/home"><GetIcon iconName="bi bi-journal-richtext" />&nbsp;<small>Stories</small></NavLink></li>
+                                <li><NavLink to="/home"><GetIcon iconName="bi bi-credit-card-2-back-fill" />&nbsp;<small>Donate</small></NavLink></li>
+                                <li><NavLink to="/home"><GetIcon iconName="bi bi-telephone-outbound-fill" />&nbsp;<small>Contact Us</small></NavLink></li>
                             </ul>
                             <ul className="w-[45%] m-2">
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>Vision & Mission</small></NavLink></li>
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>Our Team</small></NavLink></li>
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>Where We Work</small></NavLink></li>
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>Work With Us</small></NavLink></li>
-                                <li><NavLink to="/press-release"><GetIcon iconName="bi bi-house" />&nbsp;<small>Press Release</small></NavLink></li>
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>Publications</small></NavLink></li>
+                                <li><NavLink to="/home"><GetIcon iconName="bi bi-people-fill" />&nbsp;<small>Our Team</small></NavLink></li>
+                                <li><NavLink to="/where-we-work"><GetIcon iconName="bi bi-buildings" />&nbsp;<small>Where We Work</small></NavLink></li>
+                                <li><NavLink to="/where-we-work"><GetIcon iconName="bi bi-people-fill" />&nbsp;<small>Work With Us</small></NavLink></li>
+                                <li><NavLink to="/press-release"><GetIcon iconName="bi bi-newspaper" />&nbsp;<small>Press Release</small></NavLink></li>
+                                <li><NavLink to="/publications"><GetIcon iconName="bi bi-newspaper" />&nbsp;<small>Publications</small></NavLink></li>
                             </ul>
                         </div>
                     </div>
@@ -53,8 +52,8 @@ export const AppFooter: React.FC<{}> = (): JSX.Element => {
                             10th Floor<br />
                             16 Baker St Jan, Rosebank<br />
                             2196<br />
-                            087 980 7791<br />
-                            supporters.za@actionaid.org<br />
+                            <a style={{ color: "black" }} href="tel:087 980 7791">087 980 7791</a><br />
+                            <a style={{ color: "black" }} href="mailto:supporters.za@actionaid.org">supporters.za@actionaid.org</a><br />
                         </p>
                     </div>
                 </div>
