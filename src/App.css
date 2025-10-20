@@ -289,6 +289,8 @@ section .main-container .our-programs-area {
     text-align: center;
 }
 
+section .screen-container .screen-content .red-border,
+section .publications-container .publications-content .red-border,
 section .press-release-container .press-release-content .red-border,
 section .meet-the-team-container .team-content .red-border,
 section .story-details-container .story-content .red-border,
@@ -301,6 +303,9 @@ section .main-container .our-programs-area .red-border {
     transform: translate(-50%, 0%);
 }
 
+section .screen-container .screen-content h1,
+section .publications-views .publication-article h1,
+section .publications-container .publications-content h1,
 section .press-release-container .press-release-content h1,
 section .meet-the-team-container .team-content h1,
 section .story-details-container .story-content h1,
@@ -313,6 +318,9 @@ section .main-container .our-programs-area h1 {
     text-align: center;
 }
 
+section .screen-container .screen-content,
+section .publications-views .publication-article,
+section .publications-container .publications-content,
 section .press-release-container .press-release-content,
 section .meet-the-team-container .team-content,
 section .story-details-container .story-content,
@@ -444,6 +452,60 @@ section .blog-container .blog-content .blogs-area .btn-read-more span {
     font-weight: bolder;
 }
 
+section .publications-container .publications-content .publications-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section .publications-container .publications-content .publication {
+    box-shadow: 1px 1px 1px #cccccc;
+    width: 30%;
+    margin: 10px;
+    overflow: hidden;
+}
+
+section .publications-container .publications-content .publication:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+section .publications-container .publications-content .publication .publication-photo {
+    height: 63px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+section .publications-container .publications-content .publication .publication-content {
+    margin: 2px;
+}
+
+section .publications-container .publications-content .publication h6 {
+    margin: 0 10px 0 0;
+}
+
+section .publications-container .publications-content .publication small {
+    font-size: 11px;
+}
+
+section .screen-container .screen-content .lower-content ul li {
+    list-style-type: none;
+}
+
+section .screen-container .screen-content .lower-content ul li i {
+    color: red;
+}
+
+section .screen-container .screen-content .actual-approach {
+    margin: 0 auto;
+    padding: 10px;
+    box-shadow: 0 1px 0px #cccccc;
+}
+
+section .screen-container .screen-content .emp-sol {
+    box-shadow: 0 1px 0px #cccccc;
+    padding: 10px;
+}
 
 .meet-the-team-container {
     margin-top: 10%;
