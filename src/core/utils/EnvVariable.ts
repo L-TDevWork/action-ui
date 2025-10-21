@@ -1,4 +1,9 @@
 export const EnvVariables = {
     ApiUrl: ``,
-    EndPoints: { }
+    CountriesApiUrl: `https://www.apicountries.com/`,
+    EndPoints: {
+        Countries: {
+            GetAll: `countries`,
+        }
+    }
 }
