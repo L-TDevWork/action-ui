@@ -21,7 +21,7 @@ export const AppFetchApi = () => {
     }
 
     const setHeaders = () => {
-        return { "Content-Type": "application/json", "Accept": "/" };
+        return { "Content-Type": "application/json", "Accept": "*" };
     }
 
     return { post, get, patch, remove, put };

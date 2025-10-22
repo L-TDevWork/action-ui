@@ -5,7 +5,7 @@ export const useCountriesApis = () => {
     const { get } = AppFetchApi();
 
     const getCountries = async (): Promise<TCountry[]> => {
-        return await get(EnvVariables.CountriesApiUrl, EnvVariables.EndPoints.Countries.GetAll);
+        return await get(EnvVariables.CountriesApiUrl, EnvVariables.EndPoints.Countries.GetAll + `?fields=name`);
     }
 
     return { getCountries };

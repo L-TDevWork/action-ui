@@ -380,9 +380,30 @@ section .main-container .the-reasons .more-reasons {
     margin: 10px;
 }
 
+.read-more span {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.read-more {
+    width: 20% !important;
+    cursor: pointer !important;
+    background-color: #d52b1e !important;
+}
+
+.btn-subs:hover,
+.read-more:hover {
+    cursor: pointer;
+    background-color: #202020 !important;
+}
+
 section .main-container .the-reasons .read-more {
     width: 20%;
+    cursor: pointer;
+}
 
+section .main-container .the-reasons .read-more:hover {
+    background-color: #e7005c;
 }
 
 section .main-container .the-reasons .why-container {
@@ -654,7 +675,7 @@ section .screen-container .screen-content .emp-sol {
 
 .main-content {
     width: 100%;
-    margin: 10% auto;
+    margin: 5.5% auto;
 }
 
 .donations-pannel {
@@ -696,4 +717,232 @@ section .screen-container .screen-content .emp-sol {
 .donations-pannel .pannel-footer span {
     font-size: 11px;
     color: #ffffff;
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 10px 0 60px 10px;
+        position: unset !important;
+    }
+
+    header .app-btn-donate {
+        display: none;
+        text-align: center !important;
+    }
+
+    header .app-header {
+        width: 100%;
+        margin: unset !important;
+    }
+
+    header .overlay-menu {
+        top: 120px !important;
+        right: 0 !important;
+    }
+
+    header .coop {
+        top: 230px !important;
+    }
+
+    header .app-header-menu ul {
+        display: grid;
+    }
+
+    header .app-header-content,
+    header .app-header-menu {
+        display: grid !important;
+    }
+
+    header .app-header-menu ul li {
+        margin: 10px 10px 0 10px;
+    }
+
+    header .app-header-menu {
+        padding-top: 70px;
+    }
+
+    header .app-header-content .app-header-logo {
+        width: unset !important;
+    }
+
+    section .lower-content,
+    section .upper-content {
+        margin: 10px !important;
+        display: grid !important;
+    }
+
+    .donations-pannel {
+        width: 70%;
+    }
+
+    section .blog-container .blog-content .blogs-area .blog {
+        width: 95%;
+        background: whitesmoke;
+        box-shadow: 1px 1px 1px #cccccc;
+        display: grid;
+        margin: 10px 0px 18px 10px;
+        overflow: hidden;
+        position: relative;
+        height: 350px;
+    }
+
+    section .upper-content .right-area img {
+        width: 100% !important;
+    }
+
+    section .screen-container .screen-content .actual-approach {
+        width: 100% !important;
+    }
+
+    section .screen-container .screen-content .emp-sol {
+        display: grid !important;
+    }
+
+    .main-caption {
+        top: 15% !important;
+        left: 4% !important;
+        font-size: 14px !important;
+        width: 80% !important;
+    }
+
+    .slideshow-container .sponsor-smile {
+        width: 50% !important;
+        text-align: center;
+    }
+
+    footer .footer-content .footer-section {
+        width: 100%;
+    }
+
+    section .main-container .subscription .subs-form .btn-subs {
+        width: 25%;
+    }
+
+    footer .footer-content:first-child {
+        display: grid !important;
+    }
+
+    footer .footer-content {
+        width: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    footer .footer-content .footer-section fieldset {
+        width: 95%;
+    }
+
+    header .mobile-menu-icon {
+        cursor: pointer;
+        padding: 0;
+        position: absolute;
+        right: 10px;
+    }
+
+    section .prime-cam-controls {
+        width: 95% !important;
+    }
+
+    section .main-container .area-programs .program {
+        width: unset !important;
+        text-align: center;
+        margin: unset !important;
+    }
+
+    section .the-chosen-areas {
+        margin: 10px;
+    }
+
+    section .main-container .the-reasons .pie,
+    section .main-container .the-reasons .more-reasons {
+        width: 95%;
+        margin: 10px;
+    }
+
+    section .main-container .subscription .form-fields {
+        display: unset !important;
+        flex-wrap: unset !important;
+        width: 100%;
+    }
+
+    section .form-fields select {
+        width: 100% !important;
+    }
+
+    section .screen-container .screen-content,
+    section .publications-views .publication-article,
+    section .publications-container .publications-content,
+    section .press-release-container .press-release-content,
+    section .meet-the-team-container .team-content,
+    section .story-details-container .story-content,
+    section .blog-container .blog-content,
+    section .blogs-view-container .blog-view,
+    section .blog-container .blog-content,
+    section .main-container .subscription,
+    section .main-container .the-reasons,
+    section .main-container .area-programs {
+        display: grid !important;
+        width: unset !important;
+        margin: 10px !important;
+        justify-content: unset !important;
+    }
+
+    .second-paragraph {
+        display: grid !important;
+    }
+
+    .blog-view img {
+        width: 100%;
+    }
+
+    section .publications-container .publications-content .publication {
+        box-shadow: 1px 1px 1px #cccccc;
+        width: 95%;
+        margin: 10px;
+        overflow: hidden;
+    }
+
+    section .publications-container .publications-content .publications-list {
+        display: grid !important;
+        flex-wrap: unset !important;
+    }
+
+    section .notification-holder {
+        width: 100%;
+    }
+
+    header .mobile-menu-icon .bar {
+        background-color: #e6005c;
+        display: block;
+        height: 2px;
+        margin: 4px;
+        width: 25px;
+    }
+
+    section .account-activation section .reset-password .password-reset-form {
+        width: 100%;
+    }
+
+    .main-content {
+        margin: unset !important;
+    }
+
+    .fade {
+        height: 300px !important;
+    }
+
+    section .app-coming-soon {
+        display: grid !important;
+        justify-content: unset !important;
+        width: 90% !important;
+    }
+
+    section .main-container .options-area .option-container {
+        width: 100% !important;
+    }
+
+    section .main-container .options-area {
+        display: grid !important;
+        justify-content: unset !important;
+    }
 }

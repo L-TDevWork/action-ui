@@ -89,6 +89,29 @@ export const DonationOptions: TDonationOption[] = [
 
 export const PressReleases: TBlog[] = [
     {
+        heading: `STANDING AGAINST GENOCIDE: SOLIDARITY WITH PALESTINE`,
+        message: ``,
+        date: `22 October 2025`,
+        withAddedComp: true,
+        author: ``,
+        image: false,
+        imageCaption: ``,
+        subMessage: `ActionAid South Africa (AASA) is a nationally registered civil society
+organisation and a part of the ActionAid International Federation, a global
+social justice federation working in 45 countries around the world.AASA works
+with people living in poverty and exclusion to build sustainable,`
+    }, {
+        heading: `Standing Against Genocide: Solidarity with Palestine`,
+        message: ``,
+        date: `03 September 2025 - Immediate Release`,
+        withAddedComp: true,
+        author: ``,
+        image: false,
+        imageCaption: ``,
+        subMessage: `Action Aid South Africa announces national demonstration calling for permanent ceasefire,
+unrestricted humanitarian access and accountability.`
+    },
+    {
         heading: `Generation  Gender South Africa to launch a GBV app to combat the scourge of Gender Based-Violence and Femicide (GBVF) in South Africa.`,
         message: ``,
         date: `14 March 2025`,
@@ -243,4 +266,52 @@ export const Publications: TBlog[] = [
         headerImage: ``,
         subMessage: `ActionAid South Africa wishes to invite you to attend the Young Women’s Assembly scheduled to take place in Johannesburg on 15 August 2019`
     }
+];
+
+export const CountriesLinksList: { country: string, link: string }[] = [
+    { "country": "Afghanistan", "link": "https://afghanistan.actionaid.org/" },
+    { "country": "Arab Region", "link": "http://arab-region.actionaid.org/" },
+    { "country": "Australia", "link": "https://actionaid.org.au/" },
+    { "country": "Bangladesh", "link": "http://www.actionaidbd.org/" },
+    { "country": "Brazil", "link": "https://actionaid.org.br/" },
+    { "country": "Burundi", "link": "http://burundi.actionaid.org/" },
+    { "country": "Cambodia", "link": "http://cambodia.actionaid.org/" },
+    { "country": "Denmark", "link": "http://ms.dk/" },
+    { "country": "DR Congo", "link": "http://drc.actionaid.org/" },
+    { "country": "Ethiopia", "link": "http://ethiopia.actionaid.org/" },
+    { "country": "France", "link": "https://www.actionaid.fr/" },
+    { "country": "Gambia", "link": "http://gambia.actionaid.org/" },
+    { "country": "Ghana", "link": "http://ghana.actionaid.org/" },
+    { "country": "Greece", "link": "http://www.actionaid.gr/" },
+    { "country": "Guatemala", "link": "https://guatemala.actionaid.org/" },
+    { "country": "Haiti", "link": "https://haiti.actionaid.org/" },
+    { "country": "India", "link": "https://www.actionaidindia.org/" },
+    { "country": "Indonesia", "link": "http://yappika-actionaid.or.id/" },
+    { "country": "Ireland", "link": "https://actionaid.ie/" },
+    { "country": "Italy", "link": "https://www.actionaid.it/" },
+    { "country": "Kenya", "link": "http://kenya.actionaid.org/" },
+    { "country": "Liberia", "link": "http://liberia.actionaid.org/" },
+    { "country": "Malawi", "link": "http://malawi.actionaid.org/" },
+    { "country": "Mozambique", "link": "http://mozambique.actionaid.org/" },
+    { "country": "Myanmar", "link": "http://myanmar.actionaid.org/" },
+    { "country": "Nepal", "link": "http://nepal.actionaid.org/" },
+    { "country": "Netherlands", "link": "https://actionaid.nl/" },
+    { "country": "Nigeria", "link": "http://nigeria.actionaid.org/" },
+    { "country": "Palestine", "link": "http://palestine.actionaid.org/" },
+    { "country": "Rwanda", "link": "http://rwanda.actionaid.org/" },
+    { "country": "Senegal", "link": "http://senegal.actionaid.org/" },
+    { "country": "Sierra Leone", "link": "http://sierra-leone.actionaid.org/" },
+    { "country": "Somaliland", "link": "http://somaliland.actionaid.org/" },
+    { "country": "South Africa", "link": "http://south-africa.actionaid.org/" },
+    { "country": "Spain", "link": "https://www.alianzaporlasolidaridad.org/" },
+    { "country": "Sweden", "link": "https://www.actionaid.se/" },
+    { "country": "Switzerland", "link": "https://actionaid.ch/" },
+    { "country": "Tanzania", "link": "http://tanzania.actionaid.org/" },
+    { "country": "Thailand", "link": "https://www.actionaid.or.th/" },
+    { "country": "Uganda", "link": "http://uganda.actionaid.org/" },
+    { "country": "United Kingdom", "link": "https://www.actionaid.org.uk/" },
+    { "country": "United States of America", "link": "https://www.actionaidusa.org/" },
+    { "country": "Vietnam", "link": "http://vietnam.actionaid.org/" },
+    { "country": "Zambia", "link": "http://zambia.actionaid.org/" },
+    { "country": "Zimbabwe", "link": "http://zimbabwe.actionaid.org/" }
 ];

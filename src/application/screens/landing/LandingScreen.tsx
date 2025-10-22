@@ -131,8 +131,8 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                         </div>
                     </div>
                     <div className="why-container">
-                        <h4>Contextual analysis</h4>
-                        <p>Located on the southernmost tip of the African continent, South Africa spans a total area of 1,219,912 km². It is the 25th largest country in the world.</p>
+                        <h4>South Africa and the World</h4>
+                        <p>South Africa is a powerful country on the African continent, competing with Nigeria for the status of biggest economy. This creates both problems and opportunities.</p>
                         <div className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
                             <span>Read More</span>
                         </div>
@@ -194,11 +194,11 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                             name="ZIPPostalCode" />
                     </fieldset>
                     <fieldset className="form-group">
-                        <select className="form-control" name="Country">
+                        <select style={{ width: "30%" }} className="form-control" name="Country">
                             <optgroup>
                                 <option>Select Country</option>
                                 {CountriesList?.map((country: TCountry, index: number) => {
-                                    return <option key={index} value={country?.alpha2Code}>{country?.name}</option>
+                                    return <option key={index} value={country?.name?.official}>{country?.name?.official}</option>
                                 })}
                             </optgroup>
                         </select>
