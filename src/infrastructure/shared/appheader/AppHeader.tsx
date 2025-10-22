@@ -20,7 +20,21 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
     }, [location?.pathname]);
 
 
+    useEffect(() => {
+        if (!IsNavPanel)
+            DropDownPanel?.current?.classList.remove(`overlay-menu-indisplay`);
+        else
+            DropDownPanel?.current?.classList.add(`overlay-menu-indisplay`);
+
+    }, [IsNavPanel]);
+
+
     const toggleNavDropDown = (name: string) => {
+        if (!DropDownPanel?.current?.classList?.contains(`pos-active-${name}`))
+            DropDownPanel?.current?.classList.add(`pos-active-${name}`);
+        else
+            DropDownPanel?.current?.classList.remove(`pos-active-${name}`);
+
         if (!IsNavPanel) {
             const temp: TMenuItem[] = HomeDropDownOptions?.filter((item: TMenuItem) => {
                 return (item?.parent == name);
@@ -34,7 +48,8 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
         switch (name) {
 
             case "home":
-                (DropDownPanel.current as HTMLDivElement).style.right = "29%";
+                if (window.innerWidth > 1440)
+                    (DropDownPanel.current as HTMLDivElement).style.right = "29%";
 
                 if (res)
                     (DropDownPanel.current as HTMLDivElement).style.top = "120px !important";
@@ -45,7 +60,8 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
                     (document.querySelector("header .overlay-menu") as HTMLDivElement).style.top = "230px !important"
                 }
 
-                (DropDownPanel.current as HTMLDivElement).style.right = "13%";
+                if (window.innerWidth > 1440)
+                    (DropDownPanel.current as HTMLDivElement).style.right = "13%";
                 break;
         }
 
@@ -85,17 +101,17 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
                         <li><NavLink to="/stories"><GetIcon iconName="bi bi-journal-richtext" />&nbsp;<small>Stories</small></NavLink></li>
                         <li><NavLink onClick={() => toggleNavDropDown("involved")} to="#"><GetIcon iconName="bi bi-bezier" />&nbsp;<small>Get Involved <i className="bi bi-chevron-down"></i></small></NavLink></li>
                         <li><NavLink to="#"><GetIcon iconName="bi bi-collection-play-fill" />&nbsp;<small>Media Room </small></NavLink></li>
+                        <div className="app-btn-donate" style={{
+                            marginTop: "-10px",
+                            background: "#e61914",
+                            borderRadius: 30,
+                            padding: 8
+                        }}>
+                            <span className="text-xs text-white font-bold">Donate</span>
+                        </div>
                     </ul>
-                    <div className="app-btn-donate" style={{
-                        marginTop: 10,
-                        background: "#e61914",
-                        borderRadius: 30,
-                        padding: 8
-                    }}>
-                        <span className="text-xs text-white font-bold">Donate</span>
-                    </div>
 
-                    <div ref={DropDownPanel} className={`${IsNavPanel ? 'overlay-menu-indisplay overlay-menu' : 'overlay-menu'}`}>
+                    <div ref={DropDownPanel} className="overlay-menu">
                         <ul className="grid">
                             {NavLinkMenus.map((link: TMenuItem, index: number) => {
                                 return <li
