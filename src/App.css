@@ -719,6 +719,17 @@ section .screen-container .screen-content .emp-sol {
     color: #ffffff;
 }
 
+@media screen and (max-width: 1440px) {
+    header .app-header .pos-active-home {
+        right: 37% !important;
+    }
+
+    header .app-header .pos-active-involved {
+        right: 15% !important;
+    }
+}
+
+
 @media screen and (max-width: 1024px) {
     header {
         padding: 10px 0 60px 10px;
