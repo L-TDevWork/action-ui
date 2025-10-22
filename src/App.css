@@ -719,6 +719,96 @@ section .screen-container .screen-content .emp-sol {
     color: #ffffff;
 }
 
+section .donate-overlay-bg {
+    background-image: url("./assets/images/donatesectionbg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: center;
+    height: 700px;
+}
+
+section .donations-form {
+    top: 30%;
+    width: 40%;
+    position: absolute;
+    padding: 70px 0 0 0px;
+    background-color: #ffffff;
+}
+
+section .donations-form .fields-area-tabs {
+    border: 1px solid red;
+    margin-left: 15%;
+    width: 100%;
+}
+
+section .donations-form .messages-options,
+section .donations-form .fields-area-tabs-options {
+    margin-left: 15%;
+    width: 100%;
+    margin-top: 30px;
+}
+
+section .donations-form .payment-types div:hover {
+    background-color: #202020;
+    color: #ffffff;
+}
+
+section .donations-form .payment-types div {
+    background-color: red;
+    padding: 10px;
+    cursor: pointer;
+}
+
+section .donations-form .payment-types div span {
+    color: #ffffff;
+}
+
+section .donations-form .messages-options {
+    margin-top: 10px;
+}
+
+section .donations-form .fields-area-tabs-options div {
+    border: 1px solid red;
+    width: 25%;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+section .donations-form .fields-area-tabs-options div.active {
+    background-color: red;
+    color: #ffffff;
+}
+
+section .donations-form .fields-area-tabs-options div span {
+    text-align: center;
+}
+
+section .for-donations .screen-content h1 {
+    margin: 2px !important;
+    padding: 0 !important;
+}
+
+section .donations-form .once-off,
+section .donations-form .monthly {
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    color: #000000;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+section .donations-form .active {
+    background-color: red;
+    color: #ffffff;
+}
+
+section .donations-form h1 {
+    padding: 50px;
+    font-size: 25px;
+}
+
 @media screen and (max-width: 1440px) {
     header .app-header .pos-active-home {
         right: 37% !important;

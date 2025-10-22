@@ -3,13 +3,14 @@ import { useEffect, useRef, useState, type JSX } from "react";
 import $ from "jquery";
 
 import { GetIcon } from "../icons/GetIcon";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 import Logo from "../../../assets/images/actionaid-logo.png";
 import { HomeDropDownOptions } from "../../../core/constants/Constants";
 
 export const AppHeader: React.FC<{}> = (): JSX.Element => {
     const location = useLocation();
+    const navigate = useNavigate();
     const DropDownPanel = useRef<HTMLDivElement>(null);
 
     const [IsNavPanel, setIsNavPanel] = useState<boolean>(false);
@@ -27,6 +28,11 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
             DropDownPanel?.current?.classList.add(`overlay-menu-indisplay`);
 
     }, [IsNavPanel]);
+
+
+    const handleDonation = () => {
+        navigate("/donations");
+    }
 
 
     const toggleNavDropDown = (name: string) => {
@@ -101,12 +107,14 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
                         <li><NavLink to="/stories"><GetIcon iconName="bi bi-journal-richtext" />&nbsp;<small>Stories</small></NavLink></li>
                         <li><NavLink onClick={() => toggleNavDropDown("involved")} to="#"><GetIcon iconName="bi bi-bezier" />&nbsp;<small>Get Involved <i className="bi bi-chevron-down"></i></small></NavLink></li>
                         <li><NavLink to="#"><GetIcon iconName="bi bi-collection-play-fill" />&nbsp;<small>Media Room </small></NavLink></li>
-                        <div className="app-btn-donate" style={{
-                            marginTop: "-10px",
-                            background: "#e61914",
-                            borderRadius: 30,
-                            padding: 8
-                        }}>
+                        <div
+                            onClick={handleDonation}
+                            className="app-btn-donate" style={{
+                                marginTop: "-10px",
+                                background: "#e61914",
+                                borderRadius: 30,
+                                padding: 8
+                            }}>
                             <span className="text-xs text-white font-bold">Donate</span>
                         </div>
                     </ul>
