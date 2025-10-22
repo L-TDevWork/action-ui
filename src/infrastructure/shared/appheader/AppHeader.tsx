@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState, type JSX } from "react";
 
+import $ from "jquery";
+
 import { GetIcon } from "../icons/GetIcon";
 import { NavLink, useLocation } from "react-router-dom";
 
@@ -14,8 +16,9 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
     const [NavLinkMenus, setNavLinkMenus] = useState<TMenuItem[]>([]);
 
     useEffect(() => {
-
+        isMobileView() && $(".app-header-menu ul").slideUp(500);
     }, [location?.pathname]);
+
 
     const toggleNavDropDown = (name: string) => {
         if (!IsNavPanel) {
@@ -26,12 +29,23 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
             setNavLinkMenus(temp);
         }
 
+        const res = isMobileView();
+
         switch (name) {
+
             case "home":
-                (DropDownPanel.current as HTMLDivElement).style.right = "530px";
+                (DropDownPanel.current as HTMLDivElement).style.right = "29%";
+
+                if (res)
+                    (DropDownPanel.current as HTMLDivElement).style.top = "120px !important";
+
                 break;
             default:
-                (DropDownPanel.current as HTMLDivElement).style.right = "200px";
+                if (res) {
+                    (document.querySelector("header .overlay-menu") as HTMLDivElement).style.top = "230px !important"
+                }
+
+                (DropDownPanel.current as HTMLDivElement).style.right = "13%";
                 break;
         }
 
@@ -43,6 +57,15 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
         setIsNavPanel(false);
     }
 
+    const toggleNavMenu = () => {
+        $(".app-header-menu ul").slideToggle(500);
+        $(".app-btn-donate").slideToggle();
+    }
+
+    const isMobileView = () => {
+        return window.matchMedia("(max-width: 1024px)").matches; // Adjust max-width as needed for your definition of "mobile"
+    }
+
     return <header>
         <div className="app-header">
             <div className="app-header-content">
@@ -50,14 +73,14 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
                     <span><img src={Logo} alt="logo" /></span>
                     <small></small>
                 </div>
-                <div className="mobile-menu-icon">
+                <div className="mobile-menu-icon" onClick={toggleNavMenu}>
                     <div className="bar"></div>
                     <div className="bar"></div>
                     <div className="bar"></div>
                 </div>
                 <div className="app-header-menu" style={{ display: "flex" }}>
                     <ul>
-                        <li><NavLink onClick={() => toggleNavDropDown("home")} to="#"><GetIcon iconName="bi bi-house" />&nbsp;<small>Home <i className="bi bi-chevron-down"></i></small></NavLink></li>
+                        <li><NavLink onClick={() => toggleNavDropDown("home")} to="/"><GetIcon iconName="bi bi-house" />&nbsp;<small>Home <i className="bi bi-chevron-down"></i></small></NavLink></li>
                         <li><NavLink to="/meet-the-team"><GetIcon iconName="bi bi-microsoft-teams" />&nbsp;<small>Meet the Team </small></NavLink></li>
                         <li><NavLink to="/stories"><GetIcon iconName="bi bi-journal-richtext" />&nbsp;<small>Stories</small></NavLink></li>
                         <li><NavLink onClick={() => toggleNavDropDown("involved")} to="#"><GetIcon iconName="bi bi-bezier" />&nbsp;<small>Get Involved <i className="bi bi-chevron-down"></i></small></NavLink></li>

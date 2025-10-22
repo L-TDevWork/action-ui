@@ -1,13 +1,21 @@
-type TTest = {};
-
 type TAppResponse = { status: boolean, data: any, responseCode: number, message: string };
 
 type TCountry = {
-    name: string
-    topLevelDomain: string[]
-    alpha2Code: string
-    alpha3Code: string
-    callingCodes: string[]
+    name: TCountryName
+}
+
+type TCountryName = {
+    common: string
+    link: string | undefined
+    official: string
+    nativeName: {
+        lit: TLit
+    }
+}
+
+type TLit = {
+    official: string
+    common: string
 }
 
 type TMenuItem = {
@@ -16,7 +24,6 @@ type TMenuItem = {
     icon: string
     parent: string
 }
-
 
 type TAppContext = {
     ActiveBlog: TBlog

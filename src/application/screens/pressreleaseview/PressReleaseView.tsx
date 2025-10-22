@@ -11,6 +11,8 @@ import { DefineMePress } from "../pressrelease/components/DefineMePress";
 import { GirlsClub } from "../pressrelease/components/GirlsClub";
 import { CourtsOfYoung } from "../pressrelease/components/CourtsOfYoung";
 import { CourtsOfYoungRelease } from "../pressrelease/components/CourtsOfYoungRelease";
+import { Genocide } from "../pressrelease/components/Genocide";
+import { GenocideTwo } from "../pressrelease/components/GenocideTwo";
 
 export const PressReleaseView: React.FC<{}> = (): JSX.Element => {
     const { ActiveBlog } = useAppContext();
@@ -56,6 +58,12 @@ export const PressReleaseView: React.FC<{}> = (): JSX.Element => {
 
             {ActiveBlog?.heading?.indexOf("Courts of womxn Press Release") > -1 &&
                 <CourtsOfYoungRelease />}
+
+            {ActiveBlog?.heading?.indexOf("STANDING AGAINST GENOCIDE: SOLIDARITY WITH PALESTINE") > -1 &&
+                <Genocide />}
+
+            {ActiveBlog?.heading?.indexOf("Standing Against Genocide: Solidarity with Palestine") > -1 &&
+                <GenocideTwo />}
             <br />
         </div>
 
