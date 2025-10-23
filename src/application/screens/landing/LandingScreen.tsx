@@ -1,10 +1,15 @@
 import { useEffect, useState, type JSX } from "react"
 import { SlideShow } from "../../../infrastructure/shared/slideshow/SlideShow";
-import YUWImage from "../../../assets/images/YUW-2-150x150.png";
-import NaturalImage from "../../../assets/images//naturalresources.jpg";
-import CEWImage from "../../../assets/images/Untitled-design-150x150.png";
 import { PieChart } from "../../../infrastructure/shared/charts/LadingPieChart";
 import { useCountriesApis } from "../../../infrastructure/shared/hooks/countries/useCountriesApis";
+
+import ThameticCardImgOne from "../../../assets/images/about-us.png";
+import ThameticCardImgTwo from "../../../assets/images/slide/IMG_1077.jpg";
+import ThameticCardImgFour from "../../../assets/images/slide/slider-05.jpg";
+import ThameticCardImgThree from "../../../assets/images/slide/Wrap day 3.jpg";
+
+import SubscriptionBG from "../../../assets/images/bg_main.jpg";
+import ProgramAreaBG from "../../../assets/images/bricks.48d46829b3490b0185d2.jpg";
 
 export const LandingScreen: React.FC<{}> = (): JSX.Element => {
     const { getCountries } = useCountriesApis();
@@ -42,7 +47,7 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                     width: "25%",
                     textAlign: "center"
                 }}>
-                    <span>CONTACT US</span>
+                    <span>DONATE NOW</span>
                 </div>
             </div>
             <div className="call-to-action option-container">
@@ -53,87 +58,62 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                     width: "25%",
                     textAlign: "center"
                 }}>
-                    <span>CONTACT US</span>
+                    <span>CONNECT WITH US</span>
                 </div>
             </div>
         </div>
 
-        <br />
-
         <div className="our-programs-area">
-            <h1>Our Programme Areas</h1>
+            <h1>Thematic Areas</h1>
             <div className="red-border" style={{ border: "2px solid red", width: 100, display: "flex", justifyContent: "center" }}></div>
             <br />
             <p>ActionAid South Africa was established is a part of Action Aid International, an anti-poverty agency working with poor people in over 40 countries.</p>
-
-            <br /> <br /> <br />
+        </div>
+        <div className="our-programs-areas">
             <div className="area-programs flex">
-                <div className="program">
-                    <br />
-                    <img src={CEWImage} alt="cew" />
-                    <br />
-                    <h4>Generation G</h4>
-                    <br />
-                    <p>Generation G South Africa (Gen G) is a youth program run by three partners: Activate Change Drivers, ActionAid SA, and SONKE Gender Justice.</p>
-                    <div className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
-                        <span>Read More</span>
-                    </div>
-                </div>
-                <div className="program">
-                    <br />
-                    <img src={YUWImage} alt="yuw" />
-                    <br />
-                    <h4>Young Urban Women</h4>
-                    <br />
-                    <p>The Young Urban Women Movement SA is part of a global network spanning Uganda, Malawi, Zimbabwe, the UK, and the USA.</p>
-                    <br />
-                    <div className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
-                        <span>Read More</span>
-                    </div>
-                </div>
-                <div className="program">
-                    <br />
-                    <img src={NaturalImage} alt="natural" />
-                    <br /><br />
-                    <h4 style={{ paddingTop: 15 }}>Natural Resources</h4>
-                    <br />
-                    <p>We support mining affected communities and strive to empower womxn and youth in claiming and defending their rights to land and food sovereignty.</p>
-                    <div className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
-                        <span>Read More</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <br />
-
-        <div className="the-chosen-areas">
-            <h1>Why We Have Chosen These Areas</h1>
-            <div className="red-border" style={{
-                border: "2px solid red",
-                width: 100,
-                display: "flex",
-                justifyContent: "center"
-            }}></div>
-            <br />
-            <p className="text-center">ActionAid South Africa was established is a part of Action Aid International, an anti-poverty agency working with poor people in over 40 countries.</p>
-            <br /> <br /> <br />
-            <div className="the-reasons flex justiy-between">
-                <div className="pie">
-                    <PieChart />
-                </div>
-                <div className="more-reasons">
-                    <div className="why-container">
-                        <h4>Contextual analysis</h4>
-                        <p>Located on the southernmost tip of the African continent, South Africa spans a total area of 1,219,912 km². It is the 25th largest country in the world.</p>
+                <div className="program" style={{ backgroundImage: `url(${ThameticCardImgOne})` }}>
+                    <div className="program-summary">
+                        <h4 className="font-bold">Advance Climate Justice and Resilience</h4>
+                        <p>G Advocate for climate policies that prioritise justice and sustainability for marginalised communities. AASA will support early warning systems, emergency response, and long-term resilience programming rooted in community agency and environmental justice.                    </p>
                         <div className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
                             <span>Read More</span>
                         </div>
                     </div>
-                    <div className="why-container">
-                        <h4>South Africa and the World</h4>
-                        <p>South Africa is a powerful country on the African continent, competing with Nigeria for the status of biggest economy. This creates both problems and opportunities.</p>
+                </div>
+
+                <div className="program" style={{ backgroundImage: `url(${ThameticCardImgThree})` }}>
+                    <div className="program-summary">
+                        <h4 className="font-bold">Promote Women’s Rights and Gender Equality</h4>
+                        <p>Address all forms of gender-based violence and discrimination through advocacy, partnerships, law reform, and awareness-raising. AASA will support the economic empowerment of women, including campaigns on unpaid care work and access to productive resources.</p>
                         <div className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
+                            <span>Read More</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="program" style={{ backgroundImage: `url(${ThameticCardImgTwo})` }}>
+                    <div className="program-summary">
+                        <h4 className="font-bold">Champion Youth Leadership and Economic Empowerment</h4>
+                        <p>Strengthen youth leadership through civic education, enterprise development, and digital organising. Young people will be supported to lead transformative change in their communities and engage in policy processes.</p>
+                        <div className="read-more" style={{
+                            background: "red",
+                            borderRadius: 5,
+                            textAlign: "center"
+                        }}>
+                            <span>Read More</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="program" style={{ backgroundImage: `url(${ThameticCardImgFour})` }}>
+                    <div className="program-summary">
+                        <h4 className="font-bold">Strengthen Human Rights and Democratic Governance</h4>
+                        <p>Advance civic participation, state accountability, and the protection of human rights defenders. AASA will work to ensure inclusive governance structures that reflect the needs and voices of marginalised groups.</p>
+                        <div className="read-more" style={{
+                            background: "red",
+                            borderRadius: 5,
+                            textAlign: "center"
+                        }}>
                             <span>Read More</span>
                         </div>
                     </div>
@@ -141,73 +121,110 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
             </div>
         </div>
 
-        <br />
+        <div className="programs-parent-area" style={{ backgroundImage: `url(${ProgramAreaBG})` }}>
+            <div className="parent-area-overlay">
+                <div className="the-chosen-areas">
+                    <h1>Why We Have Chosen These Areas</h1>
+                    <div className="red-border" style={{
+                        border: "2px solid red",
+                        width: 100,
+                        display: "flex",
+                        justifyContent: "center"
+                    }}></div>
+                    <br />
+                    <p className="text-center">ActionAid South Africa was established is a part of Action Aid International, an anti-poverty agency working with poor people in over 40 countries.</p>
 
-        <div className="subscription">
-            <h1>New Subscriber</h1>
-            <div className="red-border" style={{
-                border: "2px solid red",
-                width: 100,
-                display: "flex",
-                justifyContent: "center"
-            }}></div>
-            <br />
-            <p className="text-center">
-                Add your name to stay up to date and find out how you can take action for women's rights around the world.
-            </p>
+                    <div className="the-reasons flex justiy-between">
+                        <div className="pie" style={{ backgroundColor: "rgb(255 255 255 / 63%)", padding: 10, boxShadow: "1px 1px 1px #333333" }}>
+                            <PieChart />
+                        </div>
+                        <div className="more-reasons">
+                            <div className="why-container">
+                                <h4>Contextual analysis</h4>
+                                <p>Located on the southernmost tip of the African continent, South Africa spans a total area of 1,219,912 km². It is the 25th largest country in the world.</p>
+                                <div className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
+                                    <span>Read More</span>
+                                </div>
+                            </div>
+                            <div className="why-container">
+                                <h4>South Africa and the World</h4>
+                                <p>South Africa is a powerful country on the African continent, competing with Nigeria for the status of biggest economy. This creates both problems and opportunities.</p>
+                                <div className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
+                                    <span>Read More</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <div className="subs-form">
-                <div className="form-fields">
-                    <fieldset className="form-group">
-                        <input
-                            placeholder="First Name"
-                            type="text"
-                            className="form-control"
-                            name="FirstName" />
-                    </fieldset>
-                    <fieldset className="form-group">
-                        <input
-                            placeholder="Last Name"
-                            type="text"
-                            className="form-control"
-                            name="LastName" />
-                    </fieldset>
-                    <fieldset className="form-group">
-                        <input
-                            placeholder="Email"
-                            type="email"
-                            className="form-control"
-                            name="Email" />
-                    </fieldset>
-                    <fieldset className="form-group">
-                        <input
-                            placeholder="Phone Number"
-                            type="tel"
-                            className="form-control"
-                            name="PhoneNumber" />
-                    </fieldset>
-                    <fieldset className="form-group">
-                        <input
-                            placeholder="ZIP / Postal Code"
-                            type="text"
-                            className="form-control"
-                            name="ZIPPostalCode" />
-                    </fieldset>
-                    <fieldset className="form-group">
-                        <select style={{ width: "30%" }} className="form-control" name="Country">
-                            <optgroup>
-                                <option>Select Country</option>
-                                {CountriesList?.map((country: TCountry, index: number) => {
-                                    return <option key={index} value={country?.name?.official}>{country?.name?.official}</option>
-                                })}
-                            </optgroup>
-                        </select>
-                    </fieldset>
-                </div>
-                <div className="btn-subs">
-                    <span>Subscribe</span>
-                </div>
+        <div className="subs-parent-container" style={{ backgroundImage: `url(${SubscriptionBG})` }}>
+            <div className="subscription">
+                <h1>Subscribe Here</h1>
+                <div className="red-border" style={{
+                    border: "2px solid red",
+                    width: 100,
+                    display: "flex",
+                    justifyContent: "center"
+                }}></div>
                 <br />
+                <p className="text-center">
+                    Add your name to stay up to date and find out how you can take action for women's rights around the world.
+                </p>
+                <div className="subs-form">
+                    <div className="form-fields">
+                        <fieldset className="form-group">
+                            <input
+                                placeholder="First Name"
+                                type="text"
+                                className="form-control"
+                                name="FirstName" />
+                        </fieldset>
+                        <fieldset className="form-group">
+                            <input
+                                placeholder="Last Name"
+                                type="text"
+                                className="form-control"
+                                name="LastName" />
+                        </fieldset>
+                        <fieldset className="form-group">
+                            <input
+                                placeholder="Email"
+                                type="email"
+                                className="form-control"
+                                name="Email" />
+                        </fieldset>
+                        <fieldset className="form-group">
+                            <input
+                                placeholder="Phone Number"
+                                type="tel"
+                                className="form-control"
+                                name="PhoneNumber" />
+                        </fieldset>
+                        <fieldset className="form-group">
+                            <input
+                                placeholder="ZIP / Postal Code"
+                                type="text"
+                                className="form-control"
+                                name="ZIPPostalCode" />
+                        </fieldset>
+                        <fieldset className="form-group">
+                            <select className="form-control" name="Country">
+                                <optgroup>
+                                    <option>Select Country</option>
+                                    {CountriesList?.map((country: TCountry, index: number) => {
+                                        return <option key={index} value={country?.name?.official}>{country?.name?.official}</option>
+                                    })}
+                                </optgroup>
+                            </select>
+                        </fieldset>
+                        <div className="btn-subs">
+                            <span>Subscribe</span>
+                        </div>
+                        <br />
+                    </div>
+                </div>
             </div>
         </div>
     </>

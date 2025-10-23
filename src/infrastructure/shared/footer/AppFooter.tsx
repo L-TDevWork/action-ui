@@ -79,7 +79,7 @@ export const AppFooter: React.FC<{}> = (): JSX.Element => {
                             Action Aid<br />
                             Johannesburg<br />
                             10th Floor<br />
-                            16 Baker St Jan, Rosebank<br />
+                            16 Baker St, Rosebank<br />
                             2196<br />
                             <a style={{ color: "black" }} href="tel:087 980 7791">087 980 7791</a><br />
                             <a style={{ color: "black" }} href="mailto:supporters.za@actionaid.org">supporters.za@actionaid.org</a><br />

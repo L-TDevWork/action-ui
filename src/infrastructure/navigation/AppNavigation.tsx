@@ -5,17 +5,17 @@ import { BlogView } from "../../application/screens/blogview/BlogView";
 import { BlogScreen } from "../../application/screens/blog/BlogScreen";
 import { Stories } from "../../application/screens/herosection/Stories";
 import StoryDetail from "../../application/screens/herosection/StoryDetail";
+import { DonateScreen } from "../../application/screens/donate/DonateScreen";
 import { MeetTheTeam } from "../../application/screens/meettheteam/MeetTheTeam";
 import { LandingScreen } from "../../application/screens/landing/LandingScreen";
 import { PressRelease } from "../../application/screens/pressrelease/PressRelease";
+import { WhereWeWorkScreen } from "../../application/screens/wherewework/WhereWeWorkScreen";
 import { PressReleaseView } from "../../application/screens/pressreleaseview/PressReleaseView";
 import { PublicationsScreen } from "../../application/screens/publications/PublicationsScreen";
-import { PublicationViewScreen } from "../../application/screens/publicationsview/PublicationsViewScreen";
-import { VisionMissionScreen } from "../../application/screens/visionmission/VisionMissionScreen";
-import { WhereWeWorkScreen } from "../../application/screens/wherewework/WhereWeWorkScreen";
-import { StrategicPrioritiesScreen } from "../../application/screens/strategicpriorities/StrategicPrioritiesScreen";
 import { ProgrammeApproach } from "../../application/screens/programapproach/ProgrammeApproach";
-
+import { VisionMissionScreen } from "../../application/screens/visionmission/VisionMissionScreen";
+import { PublicationViewScreen } from "../../application/screens/publicationsview/PublicationsViewScreen";
+import { StrategicPrioritiesScreen } from "../../application/screens/strategicpriorities/StrategicPrioritiesScreen";
 
 export const AppNavigation: React.FC<{}> = (): JSX.Element => (
   <BrowserRouter>
@@ -24,6 +24,7 @@ export const AppNavigation: React.FC<{}> = (): JSX.Element => (
         <Route element={<LandingScreen />} path="/" />
         <Route element={<BlogScreen />} path="/blog" />
         <Route element={<Stories />} path="/stories" />
+        <Route element={<DonateScreen />} path="/donations" />
         <Route element={<StoryDetail />} path="/stories/:id" />
         <Route element={<MeetTheTeam />} path="/meet-the-team" />
         <Route element={<BlogView />} path="/blog-view/:name" />
@@ -31,10 +32,10 @@ export const AppNavigation: React.FC<{}> = (): JSX.Element => (
         <Route element={<WhereWeWorkScreen />} path="/where-we-work" />
         <Route element={<PublicationsScreen />} path="/publications" />
         <Route element={<VisionMissionScreen />} path="/vision-mission" />
+        <Route element={<ProgrammeApproach />} path="/programme-approach" />
         <Route element={<PublicationViewScreen />} path="/publication/:name" />
         <Route element={<PressReleaseView />} path="/press-release-view/:name" />
         <Route element={<StrategicPrioritiesScreen />} path="/strategic-priorities" />
-        <Route element={<ProgrammeApproach />} path="/programme-approach" />
       </Route>
     </Routes>
   </BrowserRouter>
