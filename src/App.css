@@ -29,12 +29,10 @@ h2[id="alert-dialog-title"] {
 }
 
 header {
-    position: fixed;
     width: 100%;
     padding: 31px;
     background-color: #202020;
-    top: 0;
-    z-index: 100;
+    position: relative;
 }
 
 header .overlay-menu-indisplay {
@@ -117,7 +115,7 @@ header .app-header-menu ul {
 
 header .app-header-content .app-header-logo img {
     width: 23%;
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: 100;
 }
@@ -241,6 +239,18 @@ footer .footer-content .footer-section h4 {
     border-bottom: 1px dotted #ffffff;
 }
 
+input,
+select {
+    border: 0 !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #333333 !important;
+}
+
+input:focus,
+select:focus {
+    box-shadow: unset !important;
+}
+
 .copyrights {
     background-color: #202020;
     padding: 10px;
@@ -328,8 +338,7 @@ section .blog-container .blog-content,
 section .blogs-view-container .blog-view,
 section .blog-container .blog-content,
 section .main-container .subscription,
-section .main-container .the-reasons,
-section .main-container .area-programs {
+section .main-container .the-reasons {
     width: 85%;
     margin: 0 auto;
     justify-content: center;
@@ -340,13 +349,23 @@ section .blogs-view-container .blog-view ol {
 }
 
 section .main-container .subscription .form-fields {
-    display: flex;
-    flex-wrap: wrap;
+    width: 40%;
 }
 
 section .main-container .subscription .form-fields fieldset input,
 section .main-container .subscription .form-fields fieldset select {
     width: 100%;
+}
+
+section .minor-btn {
+    width: 30% !important;
+}
+
+section .subs-parent-container {
+    background: #202020;
+    color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 section .main-container .subscription .subs-form .btn-subs {
@@ -356,7 +375,7 @@ section .main-container .subscription .subs-form .btn-subs {
     width: 20%;
     margin: 0 auto;
     text-align: center;
-    border-radius: 10px;
+    box-shadow: 1px 1px 1px #333333;
 }
 
 section .main-container .subscription .subs-form .btn-subs span {
@@ -369,9 +388,11 @@ section .main-container .subscription .form-fields fieldset {
 }
 
 section .main-container .area-programs .program {
-    width: 25%;
-    text-align: center;
-    margin: 20px;
+    width: 30%;
+    position: relative;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 section .main-container .the-reasons .pie,
@@ -385,12 +406,27 @@ section .main-container .the-reasons .more-reasons {
     text-decoration: none !important;
 }
 
+section .parent-area-overlay {
+    background-color: #f5f5f569;
+    font-weight: bold;
+}
+
+section .programs-parent-area {
+    background-repeat: no-repeat;
+    background-position-x: center;
+    width: 100%;
+    background-size: 100%;
+}
+
 .read-more {
-    width: 20% !important;
+    width: 30% !important;
     cursor: pointer !important;
+    border-radius: 0 !important;
+    box-shadow: 1px 1px 1px #333333;
     background-color: #d52b1e !important;
 }
 
+.app-btn-donate:hover,
 .btn-subs:hover,
 .read-more:hover {
     cursor: pointer;
@@ -675,7 +711,6 @@ section .screen-container .screen-content .emp-sol {
 
 .main-content {
     width: 100%;
-    margin: 5.5% auto;
 }
 
 .donations-pannel {
@@ -809,25 +844,54 @@ section .donations-form h1 {
     font-size: 25px;
 }
 
+.program-summary {
+    position: absolute;
+    bottom: 0;
+    background-color: #44051ec9;
+    color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    top: 220px;
+    transition: all .5s;
+}
+
+.program-summary .read-more,
+.program-summary p {
+    display: none;
+    font-size: 14px;
+}
+
+.program:hover .program-summary {
+    top: 0px;
+}
+
+.program:hover .program-summary p {
+    display: block;
+}
+
 @media screen and (max-width: 1440px) {
     header .app-header .pos-active-home {
-        right: 37% !important;
+        right: 0% !important;
     }
 
     header .app-header .pos-active-involved {
-        right: 15% !important;
+        right: 0% !important;
+        top: 242px !important;
     }
 }
 
 
 @media screen and (max-width: 1024px) {
     header {
-        padding: 10px 0 60px 10px;
+        padding: 10px 0 10px 10px;
+        position: unset !important;
+    }
+
+    header .app-header-content .app-header-logo img {
         position: unset !important;
     }
 
     header .app-btn-donate {
-        display: none;
         text-align: center !important;
     }
 
@@ -837,7 +901,7 @@ section .donations-form h1 {
     }
 
     header .overlay-menu {
-        top: 120px !important;
+        top: 143px !important;
         right: 0 !important;
     }
 
@@ -849,6 +913,10 @@ section .donations-form h1 {
         display: grid;
     }
 
+    section .minor-btn {
+        width: 50% !important;
+    }
+
     header .app-header-content,
     header .app-header-menu {
         display: grid !important;
@@ -856,10 +924,6 @@ section .donations-form h1 {
 
     header .app-header-menu ul li {
         margin: 10px 10px 0 10px;
-    }
-
-    header .app-header-menu {
-        padding-top: 70px;
     }
 
     header .app-header-content .app-header-logo {
@@ -902,8 +966,12 @@ section .donations-form h1 {
     .main-caption {
         top: 15% !important;
         left: 4% !important;
-        font-size: 14px !important;
+        font-size: 12px !important;
         width: 80% !important;
+    }
+
+    .pie {
+        box-shadow: unset !important;
     }
 
     .slideshow-container .sponsor-smile {
@@ -916,7 +984,21 @@ section .donations-form h1 {
     }
 
     section .main-container .subscription .subs-form .btn-subs {
-        width: 25%;
+        width: 40%;
+    }
+
+    section .screen-container .screen-content h1,
+    section .publications-views .publication-article h1,
+    section .publications-container .publications-content h1,
+    section .press-release-container .press-release-content h1,
+    section .meet-the-team-container .team-content h1,
+    section .story-details-container .story-content h1,
+    section .blogs-view-container .blog-view h1,
+    section .blog-container .blog-content h1,
+    section .main-container .subscription h1,
+    section .main-container .the-chosen-areas h1,
+    section .main-container .our-programs-area h1 {
+        font-size: 26px !important;
     }
 
     footer .footer-content:first-child {
@@ -986,6 +1068,10 @@ section .donations-form h1 {
         width: unset !important;
         margin: 10px !important;
         justify-content: unset !important;
+    }
+
+    section .main-container .area-programs {
+        margin: unset !important;
     }
 
     .second-paragraph {

@@ -1,11 +1,11 @@
 import { useEffect, type JSX } from "react";
 
-import SlideOne from "../../../assets/images/slide/slider-01.jpg";
-import SlideTwo from "../../../assets/images/slide/slider-02.jpg";
-import SlideFour from "../../../assets/images/slide/slider-04.jpg";
-import SlideFive from "../../../assets/images/slide/slider-05.jpg";
-import SlideThree from "../../../assets/images/slide/slider-03.jpg";
 import { GetIcon } from "../icons/GetIcon";
+import SlideOne from "../../../assets/images/slide/IMG_1077.jpg";
+import SlideTwo from "../../../assets/images/slide/IMG_2186.jpg";
+import SlideFive from "../../../assets/images/slide/IMG_1127.jpg";
+import SlideFour from "../../../assets/images/slide/Wrap day 3.jpg";
+import SlideThree from "../../../assets/images/slide/slider-03.jpg";
 
 export const SlideShow: React.FC<{}> = (): JSX.Element => {
     let SlideIndex: number = 0;
