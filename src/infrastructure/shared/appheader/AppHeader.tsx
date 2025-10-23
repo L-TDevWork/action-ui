@@ -1,23 +1,44 @@
 import { useEffect, useRef, useState, type JSX } from "react";
 
+import $ from "jquery";
+
 import { GetIcon } from "../icons/GetIcon";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 import Logo from "../../../assets/images/actionaid-logo.png";
 import { HomeDropDownOptions } from "../../../core/constants/Constants";
 
 export const AppHeader: React.FC<{}> = (): JSX.Element => {
     const location = useLocation();
+    const navigate = useNavigate();
     const DropDownPanel = useRef<HTMLDivElement>(null);
 
     const [IsNavPanel, setIsNavPanel] = useState<boolean>(false);
     const [NavLinkMenus, setNavLinkMenus] = useState<TMenuItem[]>([]);
 
     useEffect(() => {
-
+        isMobileView() && $(".app-header-menu ul").slideUp(500);
     }, [location?.pathname]);
 
+    useEffect(() => {
+        if (!IsNavPanel)
+            DropDownPanel?.current?.classList.remove(`overlay-menu-indisplay`);
+        else
+            DropDownPanel?.current?.classList.add(`overlay-menu-indisplay`);
+
+    }, [IsNavPanel]);
+
+
+    const handleDonation = () => {
+        navigate("/donations");
+    }
+
     const toggleNavDropDown = (name: string) => {
+        if (!DropDownPanel?.current?.classList?.contains(`pos-active-${name}`))
+            DropDownPanel?.current?.classList.add(`pos-active-${name}`);
+        else
+            DropDownPanel?.current?.classList.remove(`pos-active-${name}`);
+
         if (!IsNavPanel) {
             const temp: TMenuItem[] = HomeDropDownOptions?.filter((item: TMenuItem) => {
                 return (item?.parent == name);
@@ -26,12 +47,25 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
             setNavLinkMenus(temp);
         }
 
+        const res = isMobileView();
+
         switch (name) {
+
             case "home":
-                (DropDownPanel.current as HTMLDivElement).style.right = "530px";
+                if (window.innerWidth > 1440)
+                    (DropDownPanel.current as HTMLDivElement).style.right = "29%";
+
+                if (res)
+                    (DropDownPanel.current as HTMLDivElement).style.top = "120px !important";
+
                 break;
             default:
-                (DropDownPanel.current as HTMLDivElement).style.right = "200px";
+                if (res) {
+                    (document.querySelector("header .overlay-menu") as HTMLDivElement).style.top = "230px !important"
+                }
+
+                if (window.innerWidth > 1440)
+                    (DropDownPanel.current as HTMLDivElement).style.right = "13%";
                 break;
         }
 
@@ -43,49 +77,71 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
         setIsNavPanel(false);
     }
 
-    return <header>
-        <div className="app-header">
-            <div className="app-header-content">
-                <div className="app-header-logo">
-                    <span><img src={Logo} alt="logo" /></span>
-                    <small></small>
-                </div>
-                <div className="mobile-menu-icon">
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-                    <div className="bar"></div>
-                </div>
-                <div className="app-header-menu" style={{ display: "flex" }}>
-                    <ul>
-                        <li><NavLink onClick={() => toggleNavDropDown("home")} to="#"><GetIcon iconName="bi bi-house" />&nbsp;<small>Home <i className="bi bi-chevron-down"></i></small></NavLink></li>
-                        <li><NavLink to="/meet-the-team"><GetIcon iconName="bi bi-microsoft-teams" />&nbsp;<small>Meet the Team </small></NavLink></li>
-                        <li><NavLink to="/stories"><GetIcon iconName="bi bi-journal-richtext" />&nbsp;<small>Stories</small></NavLink></li>
-                        <li><NavLink onClick={() => toggleNavDropDown("involved")} to="#"><GetIcon iconName="bi bi-bezier" />&nbsp;<small>Get Involved <i className="bi bi-chevron-down"></i></small></NavLink></li>
-                        <li><NavLink to="#"><GetIcon iconName="bi bi-collection-play-fill" />&nbsp;<small>Media Room </small></NavLink></li>
-                    </ul>
-                    <div className="app-btn-donate" style={{
-                        marginTop: 10,
-                        background: "#e61914",
-                        borderRadius: 30,
-                        padding: 8
-                    }}>
-                        <span className="text-xs text-white font-bold">Donate</span>
-                    </div>
+    const toggleNavMenu = () => {
+        $(".app-header-menu ul").slideToggle(500);
+    }
 
-                    <div ref={DropDownPanel} className={`${IsNavPanel ? 'overlay-menu-indisplay overlay-menu' : 'overlay-menu'}`}>
-                        <ul className="grid">
-                            {NavLinkMenus.map((link: TMenuItem, index: number) => {
-                                return <li
-                                    key={index}><NavLink
-                                        onClick={() => handleNavigation()}
-                                        to={link.linkTo}><span className="link-container">
-                                            <GetIcon iconName={link.icon} />&nbsp;&nbsp; {link.name}
-                                        </span></NavLink></li>
-                            })}
-                        </ul>
-                    </div>
+    const isMobileView = () => {
+        return window.matchMedia("(max-width: 1024px)").matches; // Adjust max-width as needed for your definition of "mobile"
+    }
+
+    return <>
+        <div className="upper-header-section flex justify-content-between" style={{ backgroundColor: "whitesmoke" }}>
+            <div className="social-media-presence m-2 flex cursor-pointer">
+                <span onClick={() => window.open("https://x.com/AA_SouthAfrica")} className="p-2 block"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-twitter-x" viewBox="0 0 16 16">
+                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                </svg></span>
+                <span onClick={() => window.open("https://www.facebook.com/actionaidsafrica")} className="p-2 block"><GetIcon iconName="bi bi-facebook" /></span>
+                <span onClick={() => window.open("https://www.instagram.com/actionaid_sa/")} className="p-2 block"><GetIcon iconName="bi bi-instagram" /></span>
+                <span onClick={() => window.open("https://www.youtube.com/@actionaidsouthafricaaasa5328")} className="p-2 block"><GetIcon iconName="bi bi-youtube" /></span>
+            </div>
+            <div className="more-features flex">
+                <div
+                    onClick={handleDonation}
+                    className="app-btn-donate m-2" style={{
+                        background: "#e61914",
+                        padding: 8,
+                        boxShadow: "1px 1px 1px #333333"
+                    }}>
+                    <span className="text-xs text-white font-bold">Donate</span>
                 </div>
             </div>
         </div>
-    </header >
+        <header>
+            <div className="app-header">
+                <div className="app-header-content">
+                    <div className="app-header-logo">
+                        <span><img src={Logo} alt="logo" /></span>
+                        <small></small>
+                    </div>
+                    <div className="mobile-menu-icon" onClick={toggleNavMenu}>
+                        <div className="bar"></div>
+                        <div className="bar"></div>
+                        <div className="bar"></div>
+                    </div>
+                    <div className="app-header-menu" style={{ display: "flex" }}>
+                        <ul>
+                            <li><NavLink onClick={() => toggleNavDropDown("home")} to="/"><GetIcon iconName="bi bi-house" />&nbsp;<small>Home <i className="bi bi-chevron-down"></i></small></NavLink></li>
+                            <li><NavLink to="/meet-the-team"><GetIcon iconName="bi bi-microsoft-teams" />&nbsp;<small>Meet the Team </small></NavLink></li>
+                            <li><NavLink to="/stories"><GetIcon iconName="bi bi-journal-richtext" />&nbsp;<small>Stories</small></NavLink></li>
+                            <li><NavLink onClick={() => toggleNavDropDown("involved")} to="#"><GetIcon iconName="bi bi-bezier" />&nbsp;<small>Get Involved <i className="bi bi-chevron-down"></i></small></NavLink></li>
+                            <li><NavLink to="#"><GetIcon iconName="bi bi-collection-play-fill" />&nbsp;<small>Media Room </small></NavLink></li>
+                        </ul>
+                        <div ref={DropDownPanel} className="overlay-menu">
+                            <ul className="grid">
+                                {NavLinkMenus.map((link: TMenuItem, index: number) => {
+                                    return <li
+                                        key={index}><NavLink
+                                            onClick={() => handleNavigation()}
+                                            to={link.linkTo}><span className="link-container">
+                                                <GetIcon iconName={link.icon} />&nbsp;&nbsp; {link.name}
+                                            </span></NavLink></li>
+                                })}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </>
 }

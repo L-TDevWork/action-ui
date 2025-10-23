@@ -1,10 +1,39 @@
-import type { JSX } from "react";
+import { useEffect, useState, type JSX } from "react";
 
-import FooterMapLogo from "../../../assets/images/footer-map.png";
 import { NavLink } from "react-router-dom";
 import { GetIcon } from "../icons/GetIcon";
+import FooterMapLogo from "../../../assets/images/footer-map.png";
+import { useCountriesApis } from "../hooks/countries/useCountriesApis";
+import { CountriesLinksList } from "../../../core/constants/Constants";
 
 export const AppFooter: React.FC<{}> = (): JSX.Element => {
+    const { getCountries } = useCountriesApis();
+
+    const [CountriesList, setCountriesList] = useState<TCountry[]>([]);
+
+    useEffect(() => {
+        (async () => {
+            const res: TCountry[] = await getCountries();
+
+            res?.forEach((item: TCountry) => {
+                const ifExist = CountriesLinksList?.find((el: { country: string, link: string }) => {
+                    return el?.country?.indexOf(item?.name?.common) > -1
+                });
+
+                if (ifExist) {
+                    item.name.link = ifExist?.link
+                }
+            });
+
+            setCountriesList(res);
+
+        })();
+    }, []);
+
+    const handleCountryChange = (_: string) => {
+        // alert(value);
+    }
+
     return <>
         <footer>
             <div className="footer-container">
@@ -13,11 +42,15 @@ export const AppFooter: React.FC<{}> = (): JSX.Element => {
                         <h4>About Action Aid</h4>
                         <img src={FooterMapLogo} alt="map" />
                         <fieldset className="form-group">
-                            <select className="form-control" name="Country">
+<<<<<<< Updated upstream
+                            <select onChange={(event: React.FormEvent<HTMLSelectElement>) => handleCountryChange((event?.target as HTMLSelectElement)?.value)} className="form-control" name="Country">
+=======
+                      ``      <select className="form-control" name="Country">
+>>>>>>> Stashed changes
                                 <optgroup>
                                     <option>Select Country</option>
-                                    {[].map((country: TCountry, index: number) => {
-                                        return <option key={index} value={country?.alpha2Code}>{country?.name}</option>
+                                    {CountriesList.map((country: TCountry, index: number) => {
+                                        return <option key={index} value={country?.name?.link}>{country?.name?.common}</option>
                                     })}
                                 </optgroup>
                             </select>
@@ -28,15 +61,24 @@ export const AppFooter: React.FC<{}> = (): JSX.Element => {
                         <h4>Important Website Links</h4>
                         <div className="footer-links flex justify-between">
                             <ul className="w-[45%] m-2">
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-house" />&nbsp;<small>Home</small></NavLink></li>
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-file-break-fill" />&nbsp;<small>About Us</small></NavLink></li>
+                                <li><NavLink to="/"><GetIcon iconName="bi bi-house" />&nbsp;<small>Home</small></NavLink></li>
+                                <li><NavLink to="#"><GetIcon iconName="bi bi-file-break-fill" />&nbsp;<small>About Us</small></NavLink></li>
                                 <li><NavLink to="/blog"><GetIcon iconName="bi bi-journal-album" />&nbsp;<small>Blog</small></NavLink></li>
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-journal-richtext" />&nbsp;<small>Stories</small></NavLink></li>
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-credit-card-2-back-fill" />&nbsp;<small>Donate</small></NavLink></li>
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-telephone-outbound-fill" />&nbsp;<small>Contact Us</small></NavLink></li>
+<<<<<<< Updated upstream
+                                <li><NavLink to="/stories"><GetIcon iconName="bi bi-journal-richtext" />&nbsp;<small>Stories</small></NavLink></li>
+                                <li><NavLink to="#"><GetIcon iconName="bi bi-credit-card-2-back-fill" />&nbsp;<small>Donate</small></NavLink></li>
+                                <li><NavLink to="#"><GetIcon iconName="bi bi-telephone-outbound-fill" />&nbsp;<small>Contact Us</small></NavLink></li>
                             </ul>
                             <ul className="w-[45%] m-2">
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-people-fill" />&nbsp;<small>Our Team</small></NavLink></li>
+                                <li><NavLink to="/meet-the-team"><GetIcon iconName="bi bi-people-fill" />&nbsp;<small>Our Team</small></NavLink></li>
+=======
+                                <li><NavLink to="/home"><GetIcon iconName="bi bi-journal-richtext" />&nbsp;<small>Stories</small></NavLink></li>
+                                <li><NavLink to="/home"><GetIcon iconName="bi bi-credit-card-2-back-fill" />&nbsp;<small>Donate</small></NavLink></li>
+                                <li><NavLink to="/contact-us"><GetIcon iconName="bi bi-telephone-outbound-fill" />&nbsp;<small>Contact Us</small></NavLink></li>
+                            </ul>
+                            <ul className="w-[45%] m-2">
+                                <li><NavLink to="/our-teams"><GetIcon iconName="bi bi-people-fill" />&nbsp;<small>Our Team</small></NavLink></li>
+>>>>>>> Stashed changes
                                 <li><NavLink to="/where-we-work"><GetIcon iconName="bi bi-buildings" />&nbsp;<small>Where We Work</small></NavLink></li>
                                 <li><NavLink to="/where-we-work"><GetIcon iconName="bi bi-people-fill" />&nbsp;<small>Work With Us</small></NavLink></li>
                                 <li><NavLink to="/press-release"><GetIcon iconName="bi bi-newspaper" />&nbsp;<small>Press Release</small></NavLink></li>
@@ -50,7 +92,7 @@ export const AppFooter: React.FC<{}> = (): JSX.Element => {
                             Action Aid<br />
                             Johannesburg<br />
                             10th Floor<br />
-                            16 Baker St Jan, Rosebank<br />
+                            16 Baker St, Rosebank<br />
                             2196<br />
                             <a style={{ color: "black" }} href="tel:087 980 7791">087 980 7791</a><br />
                             <a style={{ color: "black" }} href="mailto:supporters.za@actionaid.org">supporters.za@actionaid.org</a><br />

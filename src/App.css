@@ -29,12 +29,10 @@ h2[id="alert-dialog-title"] {
 }
 
 header {
-    position: fixed;
     width: 100%;
     padding: 31px;
     background-color: #202020;
-    top: 0;
-    z-index: 100;
+    position: relative;
 }
 
 header .overlay-menu-indisplay {
@@ -117,7 +115,7 @@ header .app-header-menu ul {
 
 header .app-header-content .app-header-logo img {
     width: 23%;
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: 100;
 }
@@ -241,6 +239,18 @@ footer .footer-content .footer-section h4 {
     border-bottom: 1px dotted #ffffff;
 }
 
+input,
+select {
+    border: 0 !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #333333 !important;
+}
+
+input:focus,
+select:focus {
+    box-shadow: unset !important;
+}
+
 .copyrights {
     background-color: #202020;
     padding: 10px;
@@ -328,8 +338,7 @@ section .blog-container .blog-content,
 section .blogs-view-container .blog-view,
 section .blog-container .blog-content,
 section .main-container .subscription,
-section .main-container .the-reasons,
-section .main-container .area-programs {
+section .main-container .the-reasons {
     width: 85%;
     margin: 0 auto;
     justify-content: center;
@@ -340,13 +349,23 @@ section .blogs-view-container .blog-view ol {
 }
 
 section .main-container .subscription .form-fields {
-    display: flex;
-    flex-wrap: wrap;
+    width: 40%;
 }
 
 section .main-container .subscription .form-fields fieldset input,
 section .main-container .subscription .form-fields fieldset select {
     width: 100%;
+}
+
+section .minor-btn {
+    width: 30% !important;
+}
+
+section .subs-parent-container {
+    background: #202020;
+    color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 section .main-container .subscription .subs-form .btn-subs {
@@ -356,7 +375,7 @@ section .main-container .subscription .subs-form .btn-subs {
     width: 20%;
     margin: 0 auto;
     text-align: center;
-    border-radius: 10px;
+    box-shadow: 1px 1px 1px #333333;
 }
 
 section .main-container .subscription .subs-form .btn-subs span {
@@ -369,9 +388,11 @@ section .main-container .subscription .form-fields fieldset {
 }
 
 section .main-container .area-programs .program {
-    width: 25%;
-    text-align: center;
-    margin: 20px;
+    width: 30%;
+    position: relative;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 section .main-container .the-reasons .pie,
@@ -380,9 +401,45 @@ section .main-container .the-reasons .more-reasons {
     margin: 10px;
 }
 
+.read-more span {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+section .parent-area-overlay {
+    background-color: #f5f5f569;
+    font-weight: bold;
+}
+
+section .programs-parent-area {
+    background-repeat: no-repeat;
+    background-position-x: center;
+    width: 100%;
+    background-size: 100%;
+}
+
+.read-more {
+    width: 30% !important;
+    cursor: pointer !important;
+    border-radius: 0 !important;
+    box-shadow: 1px 1px 1px #333333;
+    background-color: #d52b1e !important;
+}
+
+.app-btn-donate:hover,
+.btn-subs:hover,
+.read-more:hover {
+    cursor: pointer;
+    background-color: #202020 !important;
+}
+
 section .main-container .the-reasons .read-more {
     width: 20%;
+    cursor: pointer;
+}
 
+section .main-container .the-reasons .read-more:hover {
+    background-color: #e7005c;
 }
 
 section .main-container .the-reasons .why-container {
@@ -567,7 +624,7 @@ section .screen-container .screen-content .emp-sol {
 .image-wrapper {
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 8px rgba(0, 0, 0, 0.1);
 }
 
 .image-wrapper img {
@@ -654,7 +711,6 @@ section .screen-container .screen-content .emp-sol {
 
 .main-content {
     width: 100%;
-    margin: 10% auto;
 }
 
 .donations-pannel {
@@ -697,3 +753,628 @@ section .screen-container .screen-content .emp-sol {
     font-size: 11px;
     color: #ffffff;
 }
+
+<<<<<<< Updated upstream
+section .donate-overlay-bg {
+    background-image: url("./assets/images/donatesectionbg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: center;
+    height: 700px;
+}
+
+section .donations-form {
+    top: 30%;
+    width: 40%;
+    position: absolute;
+    padding: 70px 0 0 0px;
+    background-color: #ffffff;
+}
+
+section .donations-form .fields-area-tabs {
+    border: 1px solid red;
+    margin-left: 15%;
+    width: 100%;
+}
+
+section .donations-form .messages-options,
+section .donations-form .fields-area-tabs-options {
+    margin-left: 15%;
+    width: 100%;
+    margin-top: 30px;
+}
+
+section .donations-form .payment-types div:hover {
+    background-color: #202020;
+    color: #ffffff;
+}
+
+section .donations-form .payment-types div {
+    background-color: red;
+    padding: 10px;
+    cursor: pointer;
+}
+
+section .donations-form .payment-types div span {
+    color: #ffffff;
+}
+
+section .donations-form .messages-options {
+    margin-top: 10px;
+}
+
+section .donations-form .fields-area-tabs-options div {
+    border: 1px solid red;
+    width: 25%;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+section .donations-form .fields-area-tabs-options div.active {
+    background-color: red;
+    color: #ffffff;
+}
+
+section .donations-form .fields-area-tabs-options div span {
+    text-align: center;
+}
+
+section .for-donations .screen-content h1 {
+    margin: 2px !important;
+    padding: 0 !important;
+}
+
+section .donations-form .once-off,
+section .donations-form .monthly {
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    color: #000000;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+section .donations-form .active {
+    background-color: red;
+    color: #ffffff;
+}
+
+section .donations-form h1 {
+    padding: 50px;
+    font-size: 25px;
+}
+
+.program-summary {
+    position: absolute;
+    bottom: 0;
+    background-color: #44051ec9;
+    color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    top: 220px;
+    transition: all .5s;
+}
+
+.program-summary .read-more,
+.program-summary p {
+    display: none;
+    font-size: 14px;
+}
+
+.program:hover .program-summary {
+    top: 0px;
+}
+
+.program:hover .program-summary p {
+    display: block;
+}
+
+@media screen and (max-width: 1440px) {
+    header .app-header .pos-active-home {
+        right: 0% !important;
+    }
+
+    header .app-header .pos-active-involved {
+        right: 0% !important;
+        top: 242px !important;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 10px 0 10px 10px;
+        position: unset !important;
+    }
+
+    header .app-header-content .app-header-logo img {
+        position: unset !important;
+    }
+
+    header .app-btn-donate {
+        text-align: center !important;
+    }
+
+    header .app-header {
+        width: 100%;
+        margin: unset !important;
+    }
+
+    header .overlay-menu {
+        top: 143px !important;
+        right: 0 !important;
+    }
+
+    header .coop {
+        top: 230px !important;
+    }
+
+    header .app-header-menu ul {
+        display: grid;
+    }
+
+    section .minor-btn {
+        width: 50% !important;
+    }
+
+    header .app-header-content,
+    header .app-header-menu {
+        display: grid !important;
+    }
+
+    header .app-header-menu ul li {
+        margin: 10px 10px 0 10px;
+    }
+
+    header .app-header-content .app-header-logo {
+        width: unset !important;
+    }
+
+    section .lower-content,
+    section .upper-content {
+        margin: 10px !important;
+        display: grid !important;
+    }
+
+    .donations-pannel {
+        width: 70%;
+    }
+
+    section .blog-container .blog-content .blogs-area .blog {
+        width: 95%;
+        background: whitesmoke;
+        box-shadow: 1px 1px 1px #cccccc;
+        display: grid;
+        margin: 10px 0px 18px 10px;
+        overflow: hidden;
+        position: relative;
+        height: 350px;
+    }
+
+    section .upper-content .right-area img {
+        width: 100% !important;
+    }
+
+    section .screen-container .screen-content .actual-approach {
+        width: 100% !important;
+    }
+
+    section .screen-container .screen-content .emp-sol {
+        display: grid !important;
+    }
+
+    .main-caption {
+        top: 15% !important;
+        left: 4% !important;
+        font-size: 12px !important;
+        width: 80% !important;
+    }
+
+    .pie {
+        box-shadow: unset !important;
+    }
+
+    .slideshow-container .sponsor-smile {
+        width: 50% !important;
+        text-align: center;
+    }
+
+    footer .footer-content .footer-section {
+        width: 100%;
+    }
+
+    section .main-container .subscription .subs-form .btn-subs {
+        width: 40%;
+    }
+
+    section .screen-container .screen-content h1,
+    section .publications-views .publication-article h1,
+    section .publications-container .publications-content h1,
+    section .press-release-container .press-release-content h1,
+    section .meet-the-team-container .team-content h1,
+    section .story-details-container .story-content h1,
+    section .blogs-view-container .blog-view h1,
+    section .blog-container .blog-content h1,
+    section .main-container .subscription h1,
+    section .main-container .the-chosen-areas h1,
+    section .main-container .our-programs-area h1 {
+        font-size: 26px !important;
+    }
+
+    footer .footer-content:first-child {
+        display: grid !important;
+    }
+
+    footer .footer-content {
+        width: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    footer .footer-content .footer-section fieldset {
+        width: 95%;
+    }
+
+    header .mobile-menu-icon {
+        cursor: pointer;
+        padding: 0;
+        position: absolute;
+        right: 10px;
+    }
+
+    section .prime-cam-controls {
+        width: 95% !important;
+    }
+
+    section .main-container .area-programs .program {
+        width: unset !important;
+        text-align: center;
+        margin: unset !important;
+    }
+
+    section .the-chosen-areas {
+        margin: 10px;
+    }
+
+    section .main-container .the-reasons .pie,
+    section .main-container .the-reasons .more-reasons {
+        width: 95%;
+        margin: 10px;
+    }
+
+    section .main-container .subscription .form-fields {
+        display: unset !important;
+        flex-wrap: unset !important;
+        width: 100%;
+    }
+
+    section .form-fields select {
+        width: 100% !important;
+    }
+
+    section .screen-container .screen-content,
+    section .publications-views .publication-article,
+    section .publications-container .publications-content,
+    section .press-release-container .press-release-content,
+    section .meet-the-team-container .team-content,
+    section .story-details-container .story-content,
+    section .blog-container .blog-content,
+    section .blogs-view-container .blog-view,
+    section .blog-container .blog-content,
+    section .main-container .subscription,
+    section .main-container .the-reasons,
+    section .main-container .area-programs {
+        display: grid !important;
+        width: unset !important;
+        margin: 10px !important;
+        justify-content: unset !important;
+    }
+
+    section .main-container .area-programs {
+        margin: unset !important;
+    }
+
+    .second-paragraph {
+        display: grid !important;
+    }
+
+    .blog-view img {
+        width: 100%;
+    }
+
+    section .publications-container .publications-content .publication {
+        box-shadow: 1px 1px 1px #cccccc;
+        width: 95%;
+        margin: 10px;
+        overflow: hidden;
+    }
+
+    section .publications-container .publications-content .publications-list {
+        display: grid !important;
+        flex-wrap: unset !important;
+    }
+
+    section .notification-holder {
+        width: 100%;
+    }
+
+    header .mobile-menu-icon .bar {
+        background-color: #e6005c;
+        display: block;
+        height: 2px;
+        margin: 4px;
+        width: 25px;
+    }
+
+    section .account-activation section .reset-password .password-reset-form {
+        width: 100%;
+    }
+
+    .main-content {
+        margin: unset !important;
+    }
+
+    .fade {
+        height: 300px !important;
+    }
+
+    section .app-coming-soon {
+        display: grid !important;
+        justify-content: unset !important;
+        width: 90% !important;
+    }
+
+    section .main-container .options-area .option-container {
+        width: 100% !important;
+    }
+
+    section .main-container .options-area {
+        display: grid !important;
+        justify-content: unset !important;
+    }
+}
+=======
+
+
+
+/* our Team */
+
+.our-teams-page {
+  font-family: "Open Sans", sans-serif;
+  color: #222;
+}
+
+.page-header {
+  background: url("https://www.actionaid.org.za/wp-content/uploads/2019/08/footer-map.png") no-repeat center/cover;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+  background-color: #d50000;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.team-section {
+  margin: 80px 0;
+  text-align: center;
+}
+
+.team-section h1 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.2s;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 40px 0;
+  background: #f5f5f5;
+  margin-top: 80px;
+}
+
+
+
+
+/* cooperate page */
+.image-item-cooperate{
+    margin: auto;
+    width: unset!important;
+}
+
+
+
+/* contact us */
+/* ===== Global ===== */
+.contact-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== Header ===== */
+.contact-header {
+  background: linear-gradient(to right, #c2185b, #e91e63);
+  color: white;
+  padding: 100px 0 60px;
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.breadcrumb {
+  margin-top: 20px;
+  font-size: 14px;
+  color: black!important;
+}
+
+.breadcrumb a {
+  color: #ffe1ec;
+  text-decoration: none;
+}
+.breadcrumb span {
+  color: #fff;
+}
+
+/* ===== Info Section ===== */
+.contact-info {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.info-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  flex: 1 1 30%;
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card i {
+  font-size: 36px;
+  color: #e91e63;
+  margin-bottom: 15px;
+}
+
+/* ===== Form Section ===== */
+.contact-form-section {
+  padding: 100px 0;
+}
+
+.form-grid {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.form-column {
+  flex: 1 1 60%;
+}
+
+.image-column {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+.image-column img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  padding: 14px 20px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #c2185b;
+}
+
+/* ===== Map Section ===== */
+.contact-map iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  display: block;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .info-grid,
+  .form-grid {
+    flex-direction: column;
+  }
+  .contact-header h1 {
+    font-size: 36px;
+  }
+}
+>>>>>>> Stashed changes
