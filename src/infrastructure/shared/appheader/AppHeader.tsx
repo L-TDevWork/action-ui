@@ -125,7 +125,7 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
                             <li><NavLink to="/meet-the-team"><GetIcon iconName="bi bi-microsoft-teams" />&nbsp;<small>Meet the Team </small></NavLink></li>
                             <li><NavLink to="/stories"><GetIcon iconName="bi bi-journal-richtext" />&nbsp;<small>Stories</small></NavLink></li>
                             <li><NavLink onClick={() => toggleNavDropDown("involved")} to="#"><GetIcon iconName="bi bi-bezier" />&nbsp;<small>Get Involved <i className="bi bi-chevron-down"></i></small></NavLink></li>
-                            <li><NavLink to="#"><GetIcon iconName="bi bi-collection-play-fill" />&nbsp;<small>Media Room </small></NavLink></li>
+                            <li><NavLink to="/blog"><GetIcon iconName="bi bi-collection-play-fill" />&nbsp;<small>Media Room </small></NavLink></li>
                         </ul>
                         <div ref={DropDownPanel} className="overlay-menu">
                             <ul className="grid">
