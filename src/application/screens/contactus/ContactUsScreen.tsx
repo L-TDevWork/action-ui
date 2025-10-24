@@ -1,11 +1,10 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { useAppContext } from "../../../core/context/AppContext";
+
 
 export const ContactUsScreen: React.FC = () => {
   return (
     <div className="contact-page">
-
+      {/* Header */}
       <section className="contact-header">
         <div className="container">
           <div className="header-text">
@@ -13,12 +12,12 @@ export const ContactUsScreen: React.FC = () => {
             <p>Join your hand with us for a better life and beautiful future.</p>
           </div>
           <div className="breadcrumb">
-            <a href="/">Home</a> &gt; <span className="">Contact Us</span>
+            <a href="/">Home</a><span className=""> &gt; </span><span>Contact Us</span>
           </div>
         </div>
       </section>
 
-
+      {/* Info Section */}
       <section className="contact-info">
         <div className="container info-grid">
           <div className="info-card">

@@ -28,7 +28,7 @@ export const CooperateEngagementScreen: React.FC<{}> = (): JSX.Element => {
         <div className="area-programs flex">
           <div className="et_pb_column et_pb_column_4_4 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough et-last-child">
             <div className="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
-              <div className="et_pb_text_inner">
+              <div className="cooperate-page">
                 <h1>Corporate Engagement</h1>
                 <RedBoarder />
                 <div className="separator"></div>
@@ -60,7 +60,7 @@ export const CooperateEngagementScreen: React.FC<{}> = (): JSX.Element => {
           </span>
         </div>
 
-        <div className="d-flex">
+        <div className="d-flex m-8">
               <div className="et_pb_text_inner">
                 <h1>Current Interventions</h1>
                   <RedBoarder />

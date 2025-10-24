@@ -73,8 +73,9 @@ export const MeetTheTeam: React.FC = (): JSX.Element => {
   return (
     <div className="meet-the-team-container" style={{ marginTop: "10%" }}>
       <div className="team-content">
-        <RedBoarder />
+   
         <h1>Meet The Team</h1>
+             <RedBoarder />
         <p>
           <strong>
             At ActionAid South Africa, our team is made up of{" "}
