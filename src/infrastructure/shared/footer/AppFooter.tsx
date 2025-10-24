@@ -58,10 +58,10 @@ export const AppFooter: React.FC<{}> = (): JSX.Element => {
                         <div className="footer-links flex justify-between">
                             <ul className="w-[45%] m-2">
                                 <li><NavLink to="/"><GetIcon iconName="bi bi-house" />&nbsp;<small>Home</small></NavLink></li>
-                                <li><NavLink to="#"><GetIcon iconName="bi bi-file-break-fill" />&nbsp;<small>About Us</small></NavLink></li>
+                                <li><NavLink to="/where-we-work"><GetIcon iconName="bi bi-file-break-fill" />&nbsp;<small>About Us</small></NavLink></li>
                                 <li><NavLink to="/blog"><GetIcon iconName="bi bi-journal-album" />&nbsp;<small>Blog</small></NavLink></li>
                                 <li><NavLink to="/stories"><GetIcon iconName="bi bi-journal-richtext" />&nbsp;<small>Stories</small></NavLink></li>
-                                <li><NavLink to="#"><GetIcon iconName="bi bi-credit-card-2-back-fill" />&nbsp;<small>Donate</small></NavLink></li>
+                                <li><NavLink to="/donate"><GetIcon iconName="bi bi-credit-card-2-back-fill" />&nbsp;<small>Donate</small></NavLink></li>
                                
                             </ul>
                             <ul className="w-[45%] m-2">
