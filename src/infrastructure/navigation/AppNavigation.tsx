@@ -41,7 +41,7 @@ export const AppNavigation: React.FC<{}> = (): JSX.Element => (
         <Route element={<PublicationsScreen />} path="/publications" />
         <Route element={<VisionMissionScreen />} path="/vision-mission" />
         <Route element={<ProgrammeApproach />} path="/programme-approach" />
-        <Route element={<CooperateEngagementScreen />} path="/Cooperate-Engagement" />
+        <Route element={<CooperateEngagementScreen />} path="/cooperate-Engagement" />
         <Route element={<PublicationViewScreen />} path="/publication/:name" />
         <Route element={<PressReleaseView />} path="/press-release-view/:name" />
         <Route element={<StrategicPrioritiesScreen />} path="/strategic-priorities" />

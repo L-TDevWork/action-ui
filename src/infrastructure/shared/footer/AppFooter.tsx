@@ -41,7 +41,7 @@ export const AppFooter: React.FC<{}> = (): JSX.Element => {
                     <div className="footer-section">
                         <h4>About Action Aid</h4>
                         <img src={FooterMapLogo} alt="map" />
-                      <fieldset className="form-group">
+                        <fieldset className="form-group">
                             <select onChange={(event: React.FormEvent<HTMLSelectElement>) => handleCountryChange((event?.target as HTMLSelectElement)?.value)} className="form-control" name="Country">
                                 <optgroup>
                                     <option>Select Country</option>
@@ -61,18 +61,11 @@ export const AppFooter: React.FC<{}> = (): JSX.Element => {
                                 <li><NavLink to="/where-we-work"><GetIcon iconName="bi bi-file-break-fill" />&nbsp;<small>About Us</small></NavLink></li>
                                 <li><NavLink to="/blog"><GetIcon iconName="bi bi-journal-album" />&nbsp;<small>Blog</small></NavLink></li>
                                 <li><NavLink to="/stories"><GetIcon iconName="bi bi-journal-richtext" />&nbsp;<small>Stories</small></NavLink></li>
-                                <li><NavLink to="/donate"><GetIcon iconName="bi bi-credit-card-2-back-fill" />&nbsp;<small>Donate</small></NavLink></li>
-                               
+                                <li><NavLink to="/donations"><GetIcon iconName="bi bi-credit-card-2-back-fill" />&nbsp;<small>Donate</small></NavLink></li>
+                                <li><NavLink to="/contact-us"><GetIcon iconName="bi bi-telephone-outbound-fill" />&nbsp;<small>Contact Us</small></NavLink></li>
                             </ul>
                             <ul className="w-[45%] m-2">
                                 <li><NavLink to="/meet-the-team"><GetIcon iconName="bi bi-people-fill" />&nbsp;<small>Our Team</small></NavLink></li>
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-journal-richtext" />&nbsp;<small>Stories</small></NavLink></li>
-                                <li><NavLink to="/home"><GetIcon iconName="bi bi-credit-card-2-back-fill" />&nbsp;<small>Donate</small></NavLink></li>
-                                <li><NavLink to="/contact-us"><GetIcon iconName="bi bi-telephone-outbound-fill" />&nbsp;<small>Contact Us</small></NavLink></li>
-                                
-                            </ul>
-                            <ul className="w-[45%] m-2">
-                                <li><NavLink to="/our-teams"><GetIcon iconName="bi bi-people-fill" />&nbsp;<small>Our Team</small></NavLink></li>
                                 <li><NavLink to="/where-we-work"><GetIcon iconName="bi bi-buildings" />&nbsp;<small>Where We Work</small></NavLink></li>
                                 <li><NavLink to="/where-we-work"><GetIcon iconName="bi bi-people-fill" />&nbsp;<small>Work With Us</small></NavLink></li>
                                 <li><NavLink to="/press-release"><GetIcon iconName="bi bi-newspaper" />&nbsp;<small>Press Release</small></NavLink></li>
