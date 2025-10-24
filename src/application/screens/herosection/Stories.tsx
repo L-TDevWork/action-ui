@@ -9,7 +9,7 @@ export const Stories: React.FC<{}> = (): JSX.Element => {
 <div className="team-content">
  <div className="hero-section">
    
-        <p>Stories page</p>
+        <h1>Stories</h1>
           <RedBoarder />
       </div>
       <StoryGrid />

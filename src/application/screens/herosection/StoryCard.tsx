@@ -15,7 +15,7 @@ const StoryCard: React.FC<StoryCardProps> = ({ title, image, excerpt, link }) =>
       <div className="story-content">
         <h3>{title}</h3>
         <p>{excerpt}</p>
-        <Link to={link} className="read-more">Read more</Link>
+        <Link to={link} className="read-more" style={{ backgroundColor: "red", borderRadius: 5,  textAlign: "center" }}> <span>Read more</span> </Link>
       </div>
     </div>
   );

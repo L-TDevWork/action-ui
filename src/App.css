@@ -684,6 +684,7 @@ section .screen-container .screen-content .emp-sol {
 
 .story-content {
     padding: 1rem;
+    margin: 7%;
 }
 
 .story-content h3 {
@@ -754,7 +755,7 @@ section .screen-container .screen-content .emp-sol {
     color: #ffffff;
 }
 
-<<<<<<< Updated upstream
+
 section .donate-overlay-bg {
     background-image: url("./assets/images/donatesectionbg.jpg");
     background-repeat: no-repeat;
@@ -1134,10 +1135,12 @@ section .donations-form h1 {
         justify-content: unset !important;
     }
 }
-=======
 
 
-
+/* cooperate page */
+.cooperate-page{
+   margin-top: 8%;
+}
 /* our Team */
 
 .our-teams-page {
@@ -1159,7 +1162,7 @@ section .donations-form h1 {
 }
 
 .breadcrumbs {
-  color: #fff;
+  color: black;
   font-size: 1rem;
 }
 
@@ -1253,15 +1256,16 @@ section .donations-form h1 {
 .breadcrumb {
   margin-top: 20px;
   font-size: 14px;
-  color: black!important;
 }
 
 .breadcrumb a {
-  color: #ffe1ec;
+  color: black;
   text-decoration: none;
+  font-weight: 900;
 }
 .breadcrumb span {
-  color: #fff;
+  color: black;
+  padding-left: 5px;
 }
 
 /* ===== Info Section ===== */
@@ -1377,4 +1381,13 @@ button:hover {
     font-size: 36px;
   }
 }
->>>>>>> Stashed changes
+
+
+/*====== Story content=====*/
+
+.story-content {
+    margin: 6% !important;
+}
+
+
+
