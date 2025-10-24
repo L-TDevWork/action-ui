@@ -763,22 +763,18 @@ section .donate-overlay-bg {
 }
 
 section .donations-form {
-    top: 30%;
-    width: 40%;
-    position: absolute;
+    width: 70%;
     padding: 70px 0 0 0px;
     background-color: #ffffff;
 }
 
 section .donations-form .fields-area-tabs {
     border: 1px solid red;
-    margin-left: 15%;
     width: 100%;
 }
 
 section .donations-form .messages-options,
 section .donations-form .fields-area-tabs-options {
-    margin-left: 15%;
     width: 100%;
     margin-top: 30px;
 }
@@ -805,7 +801,7 @@ section .donations-form .messages-options {
 section .donations-form .fields-area-tabs-options div {
     border: 1px solid red;
     width: 25%;
-    margin: 10px;
+    margin: 10px 10px 10px 0px;
     text-align: center;
     cursor: pointer;
 }
@@ -869,19 +865,108 @@ section .donations-form h1 {
     display: block;
 }
 
-@media screen and (max-width: 1440px) {
-    header .app-header .pos-active-home {
-        right: 0% !important;
-    }
+.main-caption {
+    background-color: #ffffff96;
+    padding: 10px;
+    color: #000000 !important;
+}
 
-    header .app-header .pos-active-involved {
-        right: 0% !important;
-        top: 242px !important;
-    }
+.main-caption .sponsor-smile {
+    color: #ffffff !important;
+}
+
+.article-holder {
+    display: flex;
+    width: 30%;
+    cursor: pointer;
+    margin: 10px 0 10px 10px;
+    background: #f7f7f7;
+    box-shadow: 1px 1px 1px #cccccc;
+}
+
+.user-holder:hover,
+.article-holder:hover {
+    background-color: #ffffff;
+    box-shadow: 1px 1px 1px #cccccc;
+}
+
+.user-holder:hover .user-names,
+.article-holder:hover .article-name-topic {
+    color: #e6005c;
+}
+
+.user-holder .user-image,
+.article-holder .article-image {
+    width: 50px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2px 5px 0px 0px;
+}
+
+.user-holder .user-image img,
+.article-holder .article-image img {
+    width: 100%;
+    padding: 10px 5px 0px 0px;
+}
+
+.user-holder .user-details,
+.article-holder .article-details {
+    width: 70%;
+}
+
+.user-holder .user-details div:first-child,
+.article-holder .article-details div:first-child {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.user-holder .user-details div:nth-child(2),
+.article-holder .article-details div:nth-child(2) {
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.user-holder .user-details div:nth-child(3),
+.article-holder .article-details div:nth-child(3) {
+    font-size: 11px;
 }
 
 
+section .what-happens {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+@media screen and (max-width: 1440px) {
+    header .app-header .pos-active-home {
+        right: 33% !important;
+        z-index: 100;
+    }
+
+    header .app-header .pos-active-involved {
+        right: 11% !important;
+        top: 75px !important;
+        z-index: 100;
+    }
+}
+
 @media screen and (max-width: 1024px) {
+    header .app-header .app-header-content .pos-active-home {
+        right: 0% !important;
+    }
+
+    header .app-header .app-header-content .pos-active-involved {
+        right: 0% !important;
+        top: 242px !important;
+    }
+
     header {
         padding: 10px 0 10px 10px;
         position: unset !important;
@@ -965,9 +1050,9 @@ section .donations-form h1 {
 
     .main-caption {
         top: 15% !important;
-        left: 4% !important;
+        left: 0% !important;
         font-size: 12px !important;
-        width: 80% !important;
+        width: 100% !important;
     }
 
     .pie {
@@ -1112,6 +1197,8 @@ section .donations-form h1 {
 
     .main-content {
         margin: unset !important;
+        padding: 0;
+        width: 100% !important;
     }
 
     .fade {

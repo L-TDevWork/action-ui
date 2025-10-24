@@ -22,13 +22,13 @@ export const PressRelease: React.FC<{}> = (): JSX.Element => {
             ActiveBlog.headerImage = FemaleFBVImage;
     }, [ActiveBlog]);
 
-    return <div className="blog-container" style={{ marginTop: "10%" }}>
+    return <div className="blog-container">
         <div className="blog-content">
             <h1>Press Release</h1>
             <RedBoarder />
             <div className="blogs-area">
                 {PressReleases?.map((blog: TBlog, index: number) => {
-                    return <ContentCard Content={blog} key={index} toggleBlogArticle={toggleBlogArticle} />
+                    return <ContentCard Article={blog} key={index} toggleBlogArticle={toggleBlogArticle} />
                 })}
             </div>
             <div className="blogs-view-area"></div>
