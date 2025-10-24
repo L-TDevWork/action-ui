@@ -128,7 +128,7 @@ export const DonateScreen: React.FC<{}> = (): JSX.Element => {
                 <h1 className="font-bold">What Actionaid Does</h1>
                 <RedBoarder />
                 <div className="flex justify-content-between">
-                    <div className="mt-4">
+                    <div className="m-4">
                         <p>ActionAid is an international charity that works with womxn and girls living in poverty. The denial of their rights is one of the biggest causes of poverty worldwide, and a grave injustice. That’s why we put the rights of womxn and girls at the heart of all we do.</p>
                         <p>Our dedicated local staff are helping end violence against womxn and girls and changing lives, for good. We won’t stop until womxn and girls are out of danger, out of poverty and on track to create the future they want.</p>
                         <p>We focus on womxn and girls. Because when they unlock their potential and claim their rights, they can change the course of their lives, and the lives of their families, forever.</p>
