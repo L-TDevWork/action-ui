@@ -1,6 +1,13 @@
 import { type JSX } from "react";
 import { RedBoarder } from "../../../infrastructure/shared/redborder/RedBoarder";
-import SakhilaImage from "../../../assets/images/66.png"; // Replace with actual images as needed
+import Caroline from "../../../assets/images/meet-the-team/Caroline Ntaopane - Swedish Bio Program Manager.png"; 
+import Eline from "../../../assets/images/meet-the-team/Eline Hietbrink - Fundraising and Programs Support.png"; 
+import Joyce from "../../../assets/images/meet-the-team/Joyce Matsiliso - Fundraising Intern.png"; 
+import Kelefang from "../../../assets/images/meet-the-team/Kelefang Shuping - Supporter Care Officer.png"; 
+import Lethabong from "../../../assets/images/meet-the-team/Lethabong Khalo - Finance Manager.png"; 
+import Lorraine from "../../../assets/images/meet-the-team/Lorraine Kakaza - Finance Assistant.png"; 
+import Mathapelo from "../../../assets/images/meet-the-team/Mathapelo Makhubu - Communications Intern.png"; 
+import Ntsiki from "../../../assets/images/meet-the-team/Ntsiki Khunju - Young Urban Women Project Co-ordinator.png"; 
 
 interface TeamMember {
   name: string;
@@ -10,42 +17,44 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Sakhile Zungu",
-    title: "Interim Country Director",
-    image: SakhilaImage,
+    name: "Caroline Ntaopane - Swedish ",
+    title: "Bio Program Manager",
+    image: Caroline,
   },
 
   {
-    name: "Thando Mokoena",
-    title: "Finance Lead",
-    image: SakhilaImage,
+    name: "Eline Hietbrink - Fundraising ",
+    title: " and Programs Support",
+    image: Eline,
   },
   {
-    name: "Lindiwe Khumalo",
-    title: "Campaign Manager",
-    image: SakhilaImage,
+    name: "Joyce Matsiliso",
+    title: "Fundraising Intern",
+    image: Joyce,
   },
   {
-    name: "Sipho Dlamini",
-    title: "Community Liaison",
-    image: SakhilaImage,
+    name: "Kelefang Shuping",
+    title: "Supporter Care Officer",
+    image: Kelefang,
   },
   {
-    name: "Nomsa Mthethwa",
-    title: "Youth Engagement Officer",
-    image: SakhilaImage,
+    name: "Lethabong Khalo ",
+    title: "Finance Manager",
+    image: Lethabong,
   },
   {
-    name: "Kagiso Mokoena",
-    title: "Legal Advisor",
-    image: SakhilaImage,
+    name: "Lorraine Kakaza ",
+    title: "Finance Assistant",
+    image: Lorraine,
   },
   {
-    name: "Buhle Mhlongo",
-    title: "Communications Officer",
-    image: SakhilaImage,
+    name: "Mathapelo Makhubu ",
+    title: "Communications Intern",
+    image: Mathapelo,
   },
-  { name: "Neo Radebe", title: "Monitoring & Evaluation", image: SakhilaImage },
+  { name: "Ntsiki Khunju - Young Urban",
+    title: " Women Project Co-ordinator", 
+    image: Ntsiki },
 ];
 
 export const MeetTheTeam: React.FC = (): JSX.Element => {
@@ -64,8 +73,9 @@ export const MeetTheTeam: React.FC = (): JSX.Element => {
   return (
     <div className="meet-the-team-container" style={{ marginTop: "10%" }}>
       <div className="team-content">
-        <RedBoarder />
+   
         <h1>Meet The Team</h1>
+             <RedBoarder />
         <p>
           <strong>
             At ActionAid South Africa, our team is made up of{" "}

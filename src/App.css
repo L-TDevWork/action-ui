@@ -88,8 +88,16 @@ header .overlay-menu {
     cursor: pointer;
     display: none;
     transition: all .5s;
+   
 }
-
+header .pos-active-home{
+ right:26% !important;
+    z-index: 1;
+}
+header .pos-active-involved{
+    right:10% !important;
+    z-index: 1;
+}
 header .home-dropdown {
     position: absolute;
     top: 10%;
@@ -624,7 +632,7 @@ section .screen-container .screen-content .emp-sol {
 .image-wrapper {
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 8px rgba(0, 0, 0, 0.1);
 }
 
 .image-wrapper img {
@@ -684,6 +692,7 @@ section .screen-container .screen-content .emp-sol {
 
 .story-content {
     padding: 1rem;
+    margin: 7%;
 }
 
 .story-content h3 {
@@ -753,6 +762,7 @@ section .screen-container .screen-content .emp-sol {
     font-size: 11px;
     color: #ffffff;
 }
+
 
 section .donate-overlay-bg {
     background-image: url("./assets/images/donatesectionbg.jpg");
@@ -1220,3 +1230,259 @@ section .what-happens {
         justify-content: unset !important;
     }
 }
+
+
+/* cooperate page */
+.cooperate-page{
+   margin-top: 8%;
+}
+/* our Team */
+
+.our-teams-page {
+  font-family: "Open Sans", sans-serif;
+  color: #222;
+}
+
+.page-header {
+  background: url("https://www.actionaid.org.za/wp-content/uploads/2019/08/footer-map.png") no-repeat center/cover;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+  background-color: #d50000;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs {
+  color: black;
+  font-size: 1rem;
+}
+
+.team-section {
+  margin: 80px 0;
+  text-align: center;
+}
+
+.team-section h1 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.2s;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 40px 0;
+  background: #f5f5f5;
+  margin-top: 80px;
+}
+
+
+
+
+/* cooperate page */
+.image-item-cooperate{
+    margin: auto;
+    width: unset!important;
+}
+
+
+
+/* contact us */
+/* ===== Global ===== */
+.contact-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== Header ===== */
+.contact-header {
+  background: linear-gradient(to right, #c2185b, #e91e63);
+  color: white;
+  padding: 100px 0 60px;
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.breadcrumb {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.breadcrumb a {
+  color: black;
+  text-decoration: none;
+  font-weight: 900;
+}
+.breadcrumb span {
+  color: black;
+  padding-left: 5px;
+}
+
+/* ===== Info Section ===== */
+.contact-info {
+  padding: 80px 0;
+  background: #f9f9f9;
+}
+
+.info-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  flex: 1 1 30%;
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card i {
+  font-size: 36px;
+  color: #e91e63;
+  margin-bottom: 15px;
+}
+
+/* ===== Form Section ===== */
+.contact-form-section {
+  padding: 100px 0;
+}
+
+.form-grid {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.form-column {
+  flex: 1 1 60%;
+}
+
+.image-column {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+.image-column img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  padding: 14px 20px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #c2185b;
+}
+
+/* ===== Map Section ===== */
+.contact-map iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+  display: block;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .info-grid,
+  .form-grid {
+    flex-direction: column;
+  }
+  .contact-header h1 {
+    font-size: 36px;
+  }
+}
+
+
+/*====== Story content=====*/
+
+.story-content {
+    margin: 6% !important;
+}
+
+
+

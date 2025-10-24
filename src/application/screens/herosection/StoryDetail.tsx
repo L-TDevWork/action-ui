@@ -1,11 +1,13 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
+import woman1 from "../../../assets/images/YUW-2-150x150.png";
+
 const dummyStories = [
   {
     id: "1",
     title: "Women Uplifting Women",
-    image: "image.com/300x200",
+    image: woman1,
      content: `This is the full content for story 1. Inspiring women breaking barriers in STEM fields, overcoming challenges and stereotypes 
   to create innovative solutions and foster inclusive environments. Their stories highlight resilience, creativity, and leadership 
   that pave the way for future generations of women in technology and science.`,
@@ -13,7 +15,7 @@ const dummyStories = [
   {
     id: "2",
     title: "Breaking Barriers",
-    image: "image.com/300x200",
+     image: woman1,
     content: `This is the full content for story 2. Inspiring women breaking barriers in STEM fields, overcoming challenges and stereotypes 
   to create innovative solutions and foster inclusive environments. Their stories highlight resilience, creativity, and leadership 
   that pave the way for future generations of women in technology and science.`,
@@ -22,7 +24,7 @@ const dummyStories = [
   {
     id: "3",
     title: "Education Empowerment",
-    image: "image.com/300x200",
+    image: woman1,
     content: `This is the full content for story 3.Inspiring women breaking barriers in STEM fields, overcoming challenges and stereotypes 
   to create innovative solutions and foster inclusive environments. Their stories highlight resilience, creativity, and leadership 
   that pave the way for future generations of women in technology and science.`,
@@ -31,7 +33,7 @@ const dummyStories = [
    {
     id: "4",
     title: "Education Empowerment",
-    image: "image.com/300x200",
+    image: woman1,
     content: `This is the full content for story 4.Inspiring women breaking barriers in STEM fields, overcoming challenges and stereotypes 
   to create innovative solutions and foster inclusive environments. Their stories highlight resilience, creativity, and leadership 
   that pave the way for future generations of women in technology and science.`,
@@ -40,7 +42,7 @@ const dummyStories = [
    {
     id: "5",
     title: "Education Empowerment",
-    image: "image.com/300x200",
+    image: woman1,
     content: `This is the full content for story 5.Inspiring women breaking barriers in STEM fields, overcoming challenges and stereotypes 
   to create innovative solutions and foster inclusive environments. Their stories highlight resilience, creativity, and leadership 
   that pave the way for future generations of women in technology and science.`,
@@ -49,7 +51,7 @@ const dummyStories = [
   {
     id: "6",
     title: "Education Empowerment",
-    image: "image.com/300x200",
+    image: woman1,
     content: `This is the full content for story 6.Inspiring women breaking barriers in STEM fields, overcoming challenges and stereotypes 
   to create innovative solutions and foster inclusive environments. Their stories highlight resilience, creativity, and leadership 
   that pave the way for future generations of women in technology and science.`,
@@ -58,7 +60,7 @@ const dummyStories = [
    {
     id: "7",
     title: "Education Empowerment",
-    image: "image.com/300x200",
+    image: woman1,
     content: `This is the full content for story 7.Inspiring women breaking barriers in STEM fields, overcoming challenges and stereotypes 
   to create innovative solutions and foster inclusive environments. Their stories highlight resilience, creativity, and leadership 
   that pave the way for future generations of women in technology and science.`,
@@ -67,7 +69,7 @@ const dummyStories = [
    {
     id: "8",
     title: "Education Empowerment",
-    image: "image.com/300x200",
+       image: woman1,
     content: `This is the full content for story 8.Inspiring women breaking barriers in STEM fields, overcoming challenges and stereotypes 
   to create innovative solutions and foster inclusive environments. Their stories highlight resilience, creativity, and leadership 
   that pave the way for future generations of women in technology and science.`,
