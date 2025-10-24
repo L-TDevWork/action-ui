@@ -88,8 +88,16 @@ header .overlay-menu {
     cursor: pointer;
     display: none;
     transition: all .5s;
+   
 }
-
+header .pos-active-home{
+ right:26% !important;
+    z-index: 1;
+}
+header .pos-active-involved{
+    right:10% !important;
+    z-index: 1;
+}
 header .home-dropdown {
     position: absolute;
     top: 10%;
