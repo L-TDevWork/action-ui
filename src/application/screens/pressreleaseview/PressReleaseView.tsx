@@ -20,7 +20,13 @@ export const PressReleaseView: React.FC<{}> = (): JSX.Element => {
     const [PannelStatus, setPannelStatus] = useState<boolean>(false);
 
     return <div className="blogs-view-container" style={{ paddingTop: "5%" }}>
-        <div onClick={() => setPannelStatus(true)} className="absolute right-0 m-2 p-2 cursor-pointer" style={{ backgroundColor: "red", borderRadius: 10, top: "15%" }}>
+        <div onClick={() => setPannelStatus(true)}
+            className="absolute right-0 m-2 p-2 cursor-pointer"
+            style={{
+                backgroundColor: "red",
+                borderRadius: 10,
+                top: "22%"
+            }}>
             <small className="font-bold text-xs text-white">View Donation Options</small>
         </div>
         <div className="blog-view">

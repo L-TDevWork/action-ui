@@ -75,9 +75,6 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                     <div className="program-summary">
                         <h4 className="font-bold">Advance Climate Justice and Resilience</h4>
                         <p>G Advocate for climate policies that prioritise justice and sustainability for marginalised communities. AASA will support early warning systems, emergency response, and long-term resilience programming rooted in community agency and environmental justice.                    </p>
-                        <div className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
-                            <span>Read More</span>
-                        </div>
                     </div>
                 </div>
 
@@ -85,9 +82,6 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                     <div className="program-summary">
                         <h4 className="font-bold">Promote Women’s Rights and Gender Equality</h4>
                         <p>Address all forms of gender-based violence and discrimination through advocacy, partnerships, law reform, and awareness-raising. AASA will support the economic empowerment of women, including campaigns on unpaid care work and access to productive resources.</p>
-                        <div className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
-                            <span>Read More</span>
-                        </div>
                     </div>
                 </div>
 
@@ -95,13 +89,6 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                     <div className="program-summary">
                         <h4 className="font-bold">Champion Youth Leadership and Economic Empowerment</h4>
                         <p>Strengthen youth leadership through civic education, enterprise development, and digital organising. Young people will be supported to lead transformative change in their communities and engage in policy processes.</p>
-                        <div className="read-more" style={{
-                            background: "red",
-                            borderRadius: 5,
-                            textAlign: "center"
-                        }}>
-                            <span>Read More</span>
-                        </div>
                     </div>
                 </div>
 
@@ -109,13 +96,6 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                     <div className="program-summary">
                         <h4 className="font-bold">Strengthen Human Rights and Democratic Governance</h4>
                         <p>Advance civic participation, state accountability, and the protection of human rights defenders. AASA will work to ensure inclusive governance structures that reflect the needs and voices of marginalised groups.</p>
-                        <div className="read-more" style={{
-                            background: "red",
-                            borderRadius: 5,
-                            textAlign: "center"
-                        }}>
-                            <span>Read More</span>
-                        </div>
                     </div>
                 </div>
             </div>
