@@ -89,7 +89,7 @@ export const AppFooter: React.FC<{}> = (): JSX.Element => {
             </div>
         </footer>
         <div className="copyrights text-center">
-            Copyright &copy; {new Date().getFullYear()} Action Aid. All Rights Reserved Designed by CenturyMinds
+            Copyright &copy; {new Date().getFullYear()} Action Aid. All Rights Reserved Designed by <b>TriSpark Digital: <small style={{ color: "red" }}>Three sparks of creativity</small></b>
         </div>
     </>
 }

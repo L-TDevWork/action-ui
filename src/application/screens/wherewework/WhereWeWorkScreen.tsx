@@ -3,6 +3,13 @@ import { RedBoarder } from "../../../infrastructure/shared/redborder/RedBoarder"
 
 import LocationMap from "../../../assets/images/location-map.jpg";
 
+import GallerySix from "../../../assets/images/donatesectionbg.jpg";
+import GalleryOne from "../../../assets/images/donor-money-spent.jpg";
+import GalleryTwo from "../../../assets/images/mining.png";
+import GalleryFour from "../../../assets/images/oursafety.png";
+import GalleryFive from "../../../assets/images/blogs/WhatsApp-Image-2024-07-15-at-11.24.36-1-980x735.jpeg";
+import GalleryThree from "../../../assets/images/blogs/WhatsApp-Image-2024-07-15-at-11.24.36-2-980x735.jpeg";
+
 export const WhereWeWorkScreen: React.FC<{}> = (): JSX.Element => {
     return <div className="screen-container">
         <div className="screen-content">
@@ -23,6 +30,48 @@ export const WhereWeWorkScreen: React.FC<{}> = (): JSX.Element => {
                 We partner with grass-roots organisations and social movements located in the communities we work in. We also strategically partner with research institutions and civil society alliances and coalitions.
                 <br /><br />
                 AASA recognises the limitations of NGOs to affect long term change, and believe that the only vehicle for transformative, sustainable and structural change is through the actions of people who are directly affected.</p>
+
+            <br />
+            <h4 className="font-bold">Pictorial View | Our Work</h4>
+            <div className="pictorial-area flex flex-wrap">
+                <div className="m-2 pic" style={{
+                    backgroundImage: `url(${GalleryOne})`, backgroundRepeat: "no-repeat",
+                    height: "200px",
+                    width: "30%",
+                    backgroundSize: "cover"
+                }}></div>
+                <div className="m-2 pic" style={{
+                    backgroundImage: `url(${GalleryTwo})`, backgroundRepeat: "no-repeat",
+                    height: "200px",
+                    width: "30%",
+                    backgroundSize: "cover"
+                }}></div>
+                <div className="m-2 pic" style={{
+                    backgroundImage: `url(${GalleryThree})`, backgroundRepeat: "no-repeat",
+                    height: "200px",
+                    width: "30%",
+                    backgroundSize: "cover"
+                }}></div>
+                <div className="m-2 pic" style={{
+                    backgroundImage: `url(${GalleryFour})`, backgroundRepeat: "no-repeat",
+                    height: "200px",
+                    width: "30%",
+                    backgroundSize: "cover"
+                }}></div>
+                <div className="m-2 pic" style={{
+                    backgroundImage: `url(${GalleryFive})`, backgroundRepeat: "no-repeat",
+                    height: "200px",
+                    width: "30%",
+                    backgroundSize: "cover"
+                }}></div>
+                <div className="m-2 pic" style={{
+                    backgroundImage: `url(${GallerySix})`, backgroundRepeat: "no-repeat",
+                    height: "200px",
+                    width: "30%",
+                    backgroundSize: "cover"
+                }}></div>
+            </div>
+            <br />
         </div>
     </div>
 }

@@ -10,8 +10,10 @@ import ThameticCardImgThree from "../../../assets/images/slide/Wrap day 3.jpg";
 
 import SubscriptionBG from "../../../assets/images/bg_main.jpg";
 import ProgramAreaBG from "../../../assets/images/bricks.48d46829b3490b0185d2.jpg";
+import { useNavigate } from "react-router-dom";
 
 export const LandingScreen: React.FC<{}> = (): JSX.Element => {
+    const navigate = useNavigate();
     const { getCountries } = useCountriesApis();
 
     const [CountriesList, setCountriesList] = useState<TCountry[]>([]);
@@ -30,7 +32,7 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
         <div className="options-area flex justify-between">
             <div className="call-to-action option-container">
                 <h4>CALL TO ACTION</h4>
-                <div className="minor-btn" style={{
+                <div onClick={() => navigate("/contact-us")} className="minor-btn" style={{
                     borderRadius: "50px",
                     border: "2px solid #ffffff",
                     width: "25%",
@@ -41,7 +43,7 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
             </div>
             <div className="call-to-action option-container">
                 <h4>CALL TO ACTION</h4>
-                <div className="minor-btn" style={{
+                <div onClick={() => navigate("/donations")} className="minor-btn" style={{
                     borderRadius: "50px",
                     border: "2px solid #ffffff",
                     width: "25%",
@@ -52,7 +54,7 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
             </div>
             <div className="call-to-action option-container">
                 <h4>CALL TO ACTION</h4>
-                <div className="minor-btn" style={{
+                <div onClick={() => navigate("/contact-us")} className="minor-btn" style={{
                     borderRadius: "50px",
                     border: "2px solid #ffffff",
                     width: "25%",
@@ -122,14 +124,14 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                             <div className="why-container">
                                 <h4>Contextual analysis</h4>
                                 <p>Located on the southernmost tip of the African continent, South Africa spans a total area of 1,219,912 km². It is the 25th largest country in the world.</p>
-                                <div className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
+                                <div onClick={() => navigate("/analysis")} className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
                                     <span>Read More</span>
                                 </div>
                             </div>
                             <div className="why-container">
                                 <h4>South Africa and the World</h4>
                                 <p>South Africa is a powerful country on the African continent, competing with Nigeria for the status of biggest economy. This creates both problems and opportunities.</p>
-                                <div className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
+                                <div onClick={() => navigate("/to-the-world")} className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
                                     <span>Read More</span>
                                 </div>
                             </div>

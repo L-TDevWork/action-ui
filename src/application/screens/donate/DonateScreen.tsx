@@ -67,14 +67,14 @@ export const DonateScreen: React.FC<{}> = (): JSX.Element => {
 
                         <div className="payment-types flex w-4 justify-content-between m-2">
                             {TabIndex == 2 && <>
-                                <div className="text-center" style={{ boxShadow: "1px 1px 1px #333333" }}>
+                                <div className="text-center pay-btn" style={{ boxShadow: "1px 1px 1px #333333" }}>
                                     <span className="font-bold">Credit Card</span>
                                 </div>
-                                <div className="text-center" style={{ boxShadow: "1px 1px 1px #333333" }}>
+                                <div className="text-center pay-btn" style={{ boxShadow: "1px 1px 1px #333333" }}>
                                     <span className="font-bold">Snapscan</span>
                                 </div>
                             </>}
-                            {TabIndex == 1 && <div className="text-center" style={{ boxShadow: "1px 1px 1px #333333" }}>
+                            {TabIndex == 1 && <div className="text-center pay-btn" style={{ boxShadow: "1px 1px 1px #333333" }}>
                                 <span className="font-bold">Direct Debit</span>
                             </div>}
                         </div>

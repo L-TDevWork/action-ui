@@ -34,6 +34,8 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
     }
 
     const toggleNavDropDown = (name: string) => {
+        DropDownPanel?.current?.setAttribute("class", "overlay-menu");
+
         if (!DropDownPanel?.current?.classList?.contains(`pos-active-${name}`))
             DropDownPanel?.current?.classList.add(`pos-active-${name}`);
         else
@@ -84,6 +86,25 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
     const isMobileView = () => {
         return window.matchMedia("(max-width: 1024px)").matches; // Adjust max-width as needed for your definition of "mobile"
     }
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            const header = document.querySelector("header");
+
+            // If dropdown is open AND the click was outside the header → close it
+            if (IsNavPanel && header && !header.contains(event.target as Node)) {
+                setIsNavPanel(false);
+            }
+        };
+
+        // Listen for clicks
+        document.addEventListener("mousedown", handleClickOutside);
+
+        // Cleanup
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [IsNavPanel]);
 
     return <>
         <div className="upper-header-section flex justify-content-between" style={{ backgroundColor: "whitesmoke" }}>
