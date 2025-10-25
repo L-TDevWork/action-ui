@@ -34,6 +34,8 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
     }
 
     const toggleNavDropDown = (name: string) => {
+        DropDownPanel?.current?.setAttribute("class", "overlay-menu");
+
         if (!DropDownPanel?.current?.classList?.contains(`pos-active-${name}`))
             DropDownPanel?.current?.classList.add(`pos-active-${name}`);
         else
@@ -85,6 +87,25 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
         return window.matchMedia("(max-width: 1024px)").matches; // Adjust max-width as needed for your definition of "mobile"
     }
 
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            const header = document.querySelector("header");
+
+            // If dropdown is open AND the click was outside the header → close it
+            if (IsNavPanel && header && !header.contains(event.target as Node)) {
+                setIsNavPanel(false);
+            }
+        };
+
+        // Listen for clicks
+        document.addEventListener("mousedown", handleClickOutside);
+
+        // Cleanup
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [IsNavPanel]);
+
     return <>
         <div className="upper-header-section flex justify-content-between" style={{ backgroundColor: "whitesmoke" }}>
             <div className="social-media-presence m-2 flex cursor-pointer">
@@ -125,7 +146,7 @@ export const AppHeader: React.FC<{}> = (): JSX.Element => {
                             <li><NavLink to="/meet-the-team"><GetIcon iconName="bi bi-microsoft-teams" />&nbsp;<small>Meet the Team </small></NavLink></li>
                             <li><NavLink to="/stories"><GetIcon iconName="bi bi-journal-richtext" />&nbsp;<small>Stories</small></NavLink></li>
                             <li><NavLink onClick={() => toggleNavDropDown("involved")} to="#"><GetIcon iconName="bi bi-bezier" />&nbsp;<small>Get Involved <i className="bi bi-chevron-down"></i></small></NavLink></li>
-                            <li><NavLink to="#"><GetIcon iconName="bi bi-collection-play-fill" />&nbsp;<small>Media Room </small></NavLink></li>
+                            <li><NavLink to="/blog"><GetIcon iconName="bi bi-collection-play-fill" />&nbsp;<small>Media Room </small></NavLink></li>
                         </ul>
                         <div ref={DropDownPanel} className="overlay-menu">
                             <ul className="grid">

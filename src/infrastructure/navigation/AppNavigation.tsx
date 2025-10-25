@@ -19,6 +19,8 @@ import { CooperateEngagementScreen } from "../../application/screens/cooperateen
 import { StrategicPrioritiesScreen } from "../../application/screens/strategicpriorities/StrategicPrioritiesScreen";
 import { OurTeamsScreen } from "../../application/screens/ourteams/OurTeamsScreen";
 import { ContactUsScreen } from "../../application/screens/contactus/ContactUsScreen";
+import { ContextualAnalysis } from "../../application/screens/analysis/ContextualAnalysis";
+import { ToTheWorld } from "../../application/screens/totheworld/ToTheWorld";
 
 
 
@@ -28,6 +30,7 @@ export const AppNavigation: React.FC<{}> = (): JSX.Element => (
     <Routes>
       <Route element={<AppLayout />}>
         <Route element={<LandingScreen />} path="/" />
+        <Route element={<ContextualAnalysis />} path="/analysis" />
         <Route element={<ContactUsScreen />} path="/contact-us" />
         <Route element={<OurTeamsScreen />} path="/our-teams" />
         <Route element={<BlogScreen />} path="/blog" />
@@ -41,10 +44,11 @@ export const AppNavigation: React.FC<{}> = (): JSX.Element => (
         <Route element={<PublicationsScreen />} path="/publications" />
         <Route element={<VisionMissionScreen />} path="/vision-mission" />
         <Route element={<ProgrammeApproach />} path="/programme-approach" />
-        <Route element={<CooperateEngagementScreen />} path="/Cooperate-Engagement" />
+        <Route element={<CooperateEngagementScreen />} path="/cooperate-engagement" />
         <Route element={<PublicationViewScreen />} path="/publication/:name" />
         <Route element={<PressReleaseView />} path="/press-release-view/:name" />
         <Route element={<StrategicPrioritiesScreen />} path="/strategic-priorities" />
+        <Route element={<ToTheWorld />} path="/to-the-world" />
       </Route>
     </Routes>
   </BrowserRouter>

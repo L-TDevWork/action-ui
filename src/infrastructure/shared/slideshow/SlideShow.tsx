@@ -40,14 +40,14 @@ export const SlideShow: React.FC<{}> = (): JSX.Element => {
                     <p>The Young Urban Women Movement (YUWM) has been at the forefront of shaping an economy that puts people first especially women.
                         Their voices are not just part of the conversation; they are driving the change!</p>
                     <br />
-                    <div className="sponsor-smile" style={{
+                    {/* <div className="sponsor-smile" style={{
                         marginTop: 10,
                         background: "#e61914",
                         borderRadius: 30,
                         padding: 8
                     }}>
                         <span>Sponsor a Smile <GetIcon iconName="bi bi-chevron-right" /></span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
@@ -58,14 +58,14 @@ export const SlideShow: React.FC<{}> = (): JSX.Element => {
                     <p>The Young Urban Women Movement (YUWM) has been at the forefront of shaping an economy that puts people first especially women.
                         Their voices are not just part of the conversation; they are driving the change!</p>
                     <br />
-                    <div className="sponsor-smile" style={{
+                    {/* <div className="sponsor-smile" style={{
                         marginTop: 10,
                         background: "#e61914",
                         borderRadius: 30,
                         padding: 8
                     }}>
                         <span>Sponsor a Smile <GetIcon iconName="bi bi-chevron-right" /></span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
@@ -76,14 +76,14 @@ export const SlideShow: React.FC<{}> = (): JSX.Element => {
                     <p>The Young Urban Women Movement (YUWM) has been at the forefront of shaping an economy that puts people first especially women.
                         Their voices are not just part of the conversation; they are driving the change!</p>
                     <br />
-                    <div className="sponsor-smile" style={{
+                    {/* <div className="sponsor-smile" style={{
                         marginTop: 10,
                         background: "#e61914",
                         borderRadius: 30,
                         padding: 8
                     }}>
                         <span>Sponsor a Smile <GetIcon iconName="bi bi-chevron-right" /></span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
@@ -94,14 +94,14 @@ export const SlideShow: React.FC<{}> = (): JSX.Element => {
                     <p>The Young Urban Women Movement (YUWM) has been at the forefront of shaping an economy that puts people first especially women.
                         Their voices are not just part of the conversation; they are driving the change!</p>
                     <br />
-                    <div className="sponsor-smile" style={{
+                    {/* <div className="sponsor-smile" style={{
                         marginTop: 10,
                         background: "#e61914",
                         borderRadius: 30,
                         padding: 8
                     }}>
                         <span>Sponsor a Smile <GetIcon iconName="bi bi-chevron-right" /></span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 
@@ -112,14 +112,14 @@ export const SlideShow: React.FC<{}> = (): JSX.Element => {
                     <p>The Young Urban Women Movement (YUWM) has been at the forefront of shaping an economy that puts people first especially women.
                         Their voices are not just part of the conversation; they are driving the change!</p>
                     <br />
-                    <div className="sponsor-smile" style={{
+                    {/* <div className="sponsor-smile" style={{
                         marginTop: 10,
                         background: "#e61914",
                         borderRadius: 30,
                         padding: 8
                     }}>
                         <span>Sponsor a Smile <GetIcon iconName="bi bi-chevron-right" /></span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

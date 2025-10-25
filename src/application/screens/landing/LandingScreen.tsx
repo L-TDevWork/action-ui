@@ -10,8 +10,10 @@ import ThameticCardImgThree from "../../../assets/images/slide/Wrap day 3.jpg";
 
 import SubscriptionBG from "../../../assets/images/bg_main.jpg";
 import ProgramAreaBG from "../../../assets/images/bricks.48d46829b3490b0185d2.jpg";
+import { useNavigate } from "react-router-dom";
 
 export const LandingScreen: React.FC<{}> = (): JSX.Element => {
+    const navigate = useNavigate();
     const { getCountries } = useCountriesApis();
 
     const [CountriesList, setCountriesList] = useState<TCountry[]>([]);
@@ -30,7 +32,7 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
         <div className="options-area flex justify-between">
             <div className="call-to-action option-container">
                 <h4>CALL TO ACTION</h4>
-                <div className="minor-btn" style={{
+                <div onClick={() => navigate("/contact-us")} className="minor-btn" style={{
                     borderRadius: "50px",
                     border: "2px solid #ffffff",
                     width: "25%",
@@ -41,7 +43,7 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
             </div>
             <div className="call-to-action option-container">
                 <h4>CALL TO ACTION</h4>
-                <div className="minor-btn" style={{
+                <div onClick={() => navigate("/donations")} className="minor-btn" style={{
                     borderRadius: "50px",
                     border: "2px solid #ffffff",
                     width: "25%",
@@ -52,7 +54,7 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
             </div>
             <div className="call-to-action option-container">
                 <h4>CALL TO ACTION</h4>
-                <div className="minor-btn" style={{
+                <div onClick={() => navigate("/contact-us")} className="minor-btn" style={{
                     borderRadius: "50px",
                     border: "2px solid #ffffff",
                     width: "25%",
@@ -75,9 +77,6 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                     <div className="program-summary">
                         <h4 className="font-bold">Advance Climate Justice and Resilience</h4>
                         <p>G Advocate for climate policies that prioritise justice and sustainability for marginalised communities. AASA will support early warning systems, emergency response, and long-term resilience programming rooted in community agency and environmental justice.                    </p>
-                        <div className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
-                            <span>Read More</span>
-                        </div>
                     </div>
                 </div>
 
@@ -85,9 +84,6 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                     <div className="program-summary">
                         <h4 className="font-bold">Promote Women’s Rights and Gender Equality</h4>
                         <p>Address all forms of gender-based violence and discrimination through advocacy, partnerships, law reform, and awareness-raising. AASA will support the economic empowerment of women, including campaigns on unpaid care work and access to productive resources.</p>
-                        <div className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
-                            <span>Read More</span>
-                        </div>
                     </div>
                 </div>
 
@@ -95,13 +91,6 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                     <div className="program-summary">
                         <h4 className="font-bold">Champion Youth Leadership and Economic Empowerment</h4>
                         <p>Strengthen youth leadership through civic education, enterprise development, and digital organising. Young people will be supported to lead transformative change in their communities and engage in policy processes.</p>
-                        <div className="read-more" style={{
-                            background: "red",
-                            borderRadius: 5,
-                            textAlign: "center"
-                        }}>
-                            <span>Read More</span>
-                        </div>
                     </div>
                 </div>
 
@@ -109,13 +98,6 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                     <div className="program-summary">
                         <h4 className="font-bold">Strengthen Human Rights and Democratic Governance</h4>
                         <p>Advance civic participation, state accountability, and the protection of human rights defenders. AASA will work to ensure inclusive governance structures that reflect the needs and voices of marginalised groups.</p>
-                        <div className="read-more" style={{
-                            background: "red",
-                            borderRadius: 5,
-                            textAlign: "center"
-                        }}>
-                            <span>Read More</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -142,14 +124,14 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
                             <div className="why-container">
                                 <h4>Contextual analysis</h4>
                                 <p>Located on the southernmost tip of the African continent, South Africa spans a total area of 1,219,912 km². It is the 25th largest country in the world.</p>
-                                <div className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
+                                <div onClick={() => navigate("/analysis")} className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
                                     <span>Read More</span>
                                 </div>
                             </div>
                             <div className="why-container">
                                 <h4>South Africa and the World</h4>
                                 <p>South Africa is a powerful country on the African continent, competing with Nigeria for the status of biggest economy. This creates both problems and opportunities.</p>
-                                <div className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
+                                <div onClick={() => navigate("/to-the-world")} className="read-more" style={{ background: "red", borderRadius: 5, textAlign: "center" }}>
                                     <span>Read More</span>
                                 </div>
                             </div>

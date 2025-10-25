@@ -15,13 +15,13 @@ export const BlogScreen: React.FC<{}> = (): JSX.Element => {
         navigate(`/blog-view/${blog?.heading.replaceAll(" ", "-")}`);
     }
 
-    return <div className="blog-container" style={{ marginTop: "10%" }}>
+    return <div className="blog-container">
         <div className="blog-content">
             <h1>Blog</h1>
            <RedBoarder/>
             <div className="blogs-area">
                 {Blogs?.map((blog: TBlog, index: number) => {
-                    return <ContentCard Content={blog} key={index} toggleBlogArticle={toggleBlogArticle} />
+                    return <ContentCard Article={blog} key={index} toggleBlogArticle={toggleBlogArticle} />
                 })}
             </div>
             <div className="blogs-view-area"></div>
