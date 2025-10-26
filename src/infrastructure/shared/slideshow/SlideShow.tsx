@@ -1,6 +1,5 @@
 import { useEffect, type JSX } from "react";
 
-import { GetIcon } from "../icons/GetIcon";
 import SlideOne from "../../../assets/images/slide/IMG_1077.jpg";
 import SlideTwo from "../../../assets/images/slide/IMG_2186.jpg";
 import SlideFive from "../../../assets/images/slide/IMG_1127.jpg";
