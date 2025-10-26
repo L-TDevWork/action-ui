@@ -1081,6 +1081,12 @@ section .upper-content .right-area {
         width: 50% !important;
     }
 
+    .article-holder {
+        width: 100%;
+        cursor: pointer;
+        margin: 10px 0 10px 0px;
+    }
+
     .for-read-mores img {
         width: 100%;
     }
