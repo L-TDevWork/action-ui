@@ -1,7 +1,6 @@
 import type { JSX } from "react";
 import { RedBoarder } from "../../../infrastructure/shared/redborder/RedBoarder";
 
-import { GetIcon } from "../../../infrastructure/shared/icons/GetIcon";
 import Cooperate from "../../../assets/images/Cooperate-engagement/corporate-engagement.jpg";
 
 interface TeamMember {
