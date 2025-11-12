@@ -22,6 +22,7 @@ export const BlogView: React.FC<{}> = (): JSX.Element => {
         }}>
             <small className="font-bold text-xs text-white">View Donation Options</small>
         </div>
+        <br />
         <div className="blog-view">
             <h4 className="font-bold">{ActiveBlog?.heading}</h4>
             <h6 className={ActiveBlog?.author ? 'flex' : 'hidden'}>Authored By:

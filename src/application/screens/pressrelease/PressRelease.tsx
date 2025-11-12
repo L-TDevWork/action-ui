@@ -31,6 +31,7 @@ export const PressRelease: React.FC<{}> = (): JSX.Element => {
                     return <ContentCard Article={blog} key={index} toggleBlogArticle={toggleBlogArticle} />
                 })}
             </div>
+            <br />
             <div className="blogs-view-area"></div>
         </div>
         <br />
