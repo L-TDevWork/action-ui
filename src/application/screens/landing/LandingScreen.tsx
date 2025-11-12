@@ -8,9 +8,9 @@ import ThameticCardImgTwo from "../../../assets/images/slide/IMG_1077.jpg";
 import ThameticCardImgFour from "../../../assets/images/slide/slider-05.jpg";
 import ThameticCardImgThree from "../../../assets/images/slide/Wrap day 3.jpg";
 
+import { useNavigate } from "react-router-dom";
 import SubscriptionBG from "../../../assets/images/bg_main.jpg";
 import ProgramAreaBG from "../../../assets/images/bricks.48d46829b3490b0185d2.jpg";
-import { useNavigate } from "react-router-dom";
 
 export const LandingScreen: React.FC<{}> = (): JSX.Element => {
     const navigate = useNavigate();
@@ -71,6 +71,7 @@ export const LandingScreen: React.FC<{}> = (): JSX.Element => {
             <br />
             <p>ActionAid South Africa was established is a part of Action Aid International, an anti-poverty agency working with poor people in over 40 countries.</p>
         </div>
+
         <div className="our-programs-areas">
             <div className="area-programs flex">
                 <div className="program" style={{ backgroundImage: `url(${ThameticCardImgOne})` }}>

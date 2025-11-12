@@ -1,6 +1,4 @@
 import { type JSX } from "react";
-import { RedBoarder } from "../../../infrastructure/shared/redborder/RedBoarder";
-import SakhilaImage from "../../../assets/images/66.png"; 
 
 
 interface TeamMember {
@@ -83,36 +81,32 @@ const TeamSection: React.FC<TeamSectionProps> = ({ title, members }) => (
 );
 
 export const OurTeamsScreen: React.FC = (): JSX.Element => {
-  const renderTeam = (members: TeamMember[]): JSX.Element[] =>
-    members.map((member, index) => (
-      <div key={index} className="image-item">
-        <h1 className="image-heading">
-          {member.name} <br /> {member.title}
-        </h1>
-        <div className="image-wrapper">
-          <img src={member.image} alt={member.name} />
-        </div>
-      </div>
-    ));
+  // const renderTeam = (members: TeamMember[]): JSX.Element[] =>
+  //   members.map((member, index) => (
+  //     <div key={index} className="image-item">
+  //       <h1 className="image-heading">
+  //         {member.name} <br /> {member.title}
+  //       </h1>
+  //       <div className="image-wrapper">
+  //         <img src={member.image} alt={member.name} />
+  //       </div>
+  //     </div>
+  //   ));
 
   return (
     <main className="our-teams-page">
-      {/* <header className="page-header">
+      <header className="page-header">
         <div className="container">
           <h1>Our Teams</h1>
           <p className="breadcrumbs">
           </p>
         </div>
-      </header> */}
+      </header>
 
       <div className="container">
         <TeamSection title="Senior Management Team" members={seniorManagement} />
         <TeamSection title="Board Members" members={boardMembers} />
       </div>
-
-      {/* <footer className="page-footer">
-        <p>© 2019 ActionAid South Africa. All Rights Reserved.</p>
-      </footer> */}
     </main>
   );
 };

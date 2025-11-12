@@ -30,8 +30,8 @@ export const AppFooter: React.FC<{}> = (): JSX.Element => {
         })();
     }, []);
 
-    const handleCountryChange = (_: string) => {
-        // alert(value);
+    const handleCountryChange = (value: string) => {
+        window.open(value);
     }
 
     return <>
@@ -46,7 +46,8 @@ export const AppFooter: React.FC<{}> = (): JSX.Element => {
                                 <optgroup>
                                     <option>Select Country</option>
                                     {CountriesList.map((country: TCountry, index: number) => {
-                                        return <option key={index} value={country?.name?.link}>{country?.name?.common}</option>
+                                        if (country?.name?.link)
+                                            return <option key={index} value={country?.name?.link}>{country?.name?.common}</option>
                                     })}
                                 </optgroup>
                             </select>

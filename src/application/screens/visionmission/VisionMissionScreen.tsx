@@ -2,7 +2,6 @@ import type { JSX } from "react";
 import { RedBoarder } from "../../../infrastructure/shared/redborder/RedBoarder";
 
 import VisionImage from "../../../assets/images/vision.png";
-import { GetIcon } from "../../../infrastructure/shared/icons/GetIcon";
 
 export const VisionMissionScreen: React.FC<{}> = (): JSX.Element => {
   return (

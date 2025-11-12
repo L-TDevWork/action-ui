@@ -37,19 +37,19 @@ export const DonateScreen: React.FC<{}> = (): JSX.Element => {
                     <div className="w-9 fields-area-tabs-options flex justify-content-between">
                         <div style={{ boxShadow: "1px 1px 1px #333333" }} onClick={() => setTabOptionIndex(1)}
                             className={`p-2 font-bold ${TabOptionIndex == 1 && 'active'}`}>
-                            <span>R500.00</span>
+                            <span className="text-xs">R500.00</span>
                         </div>
                         <div style={{ boxShadow: "1px 1px 1px #333333" }} onClick={() => setTabOptionIndex(2)}
                             className={`p-2 font-bold ${TabOptionIndex == 2 && 'active'}`}>
-                            <span>R1000.00</span>
+                            <span className="text-xs">R1000.00</span>
                         </div>
                         <div style={{ boxShadow: "1px 1px 1px #333333" }} onClick={() => setTabOptionIndex(3)}
                             className={`p-2 font-bold ${TabOptionIndex == 3 && 'active'}`}>
-                            <span>R1500.00</span>
+                            <span className="text-xs">R1500.00</span>
                         </div>
                         <div style={{ boxShadow: "1px 1px 1px #333333" }} onClick={() => setTabOptionIndex(4)}
                             className={`p-2 font-bold ${TabOptionIndex == 4 && 'active'}`}>
-                            <span>Other</span>
+                            <span className="text-xs">Other</span>
                         </div>
                     </div>
                     <div className="w-9 messages-options grid">
@@ -127,7 +127,7 @@ export const DonateScreen: React.FC<{}> = (): JSX.Element => {
                 <br />
                 <h1 className="font-bold">What Actionaid Does</h1>
                 <RedBoarder />
-                <div className="flex justify-content-between">
+                <div className="flex justify-content-between what-action-aid-does">
                     <div className="m-4">
                         <p>ActionAid is an international charity that works with womxn and girls living in poverty. The denial of their rights is one of the biggest causes of poverty worldwide, and a grave injustice. That’s why we put the rights of womxn and girls at the heart of all we do.</p>
                         <p>Our dedicated local staff are helping end violence against womxn and girls and changing lives, for good. We won’t stop until womxn and girls are out of danger, out of poverty and on track to create the future they want.</p>
@@ -139,7 +139,7 @@ export const DonateScreen: React.FC<{}> = (): JSX.Element => {
                             <li>We work directly with and through local people, gaining unparalleled insight into what works.</li>
                         </ul>
                     </div>
-                    <div className="m-4">
+                    <div className="doney-money-spent">
                         <img src={ImageFour} alt="doney-money-spent" />
                     </div>
                 </div>

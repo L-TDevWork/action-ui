@@ -1020,8 +1020,12 @@ section .upper-content .right-area {
         width: 100% !important;
     }
 
+    section .current-inter {
+        display: grid !important;
+    }
+
     section .donate-overlay-bg {
-        height: 490px !important;
+        height: 400px !important;
     }
 
     .screen-content .payment-types {
@@ -1079,6 +1083,12 @@ section .upper-content .right-area {
 
     section .minor-btn {
         width: 50% !important;
+    }
+
+    .article-holder {
+        width: 100%;
+        cursor: pointer;
+        margin: 10px 0 10px 0px;
     }
 
     .for-read-mores img {
@@ -1248,6 +1258,28 @@ section .upper-content .right-area {
 
     .blog-view img {
         width: 100%;
+    }
+
+    section .what-action-aid-does {
+        display: grid !important;
+    }
+
+    footer .footer-section img {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 10px);
+    }
+
+    section .doney-money-spent img {
+        width: 100% !important;
+    }
+
+    section .what-happens {
+        width: 95% !important;
+    }
+
+    section .reasons-content {
+        width: 95% !important;
     }
 
     section .publications-container .publications-content .publication {
