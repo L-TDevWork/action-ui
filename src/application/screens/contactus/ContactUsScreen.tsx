@@ -31,7 +31,7 @@ export const ContactUsScreen: React.FC = () => {
             <p>Telephone: 087 980 7791</p>
           </div>
           <div className="info-card">
-            <i className="fa fa-envelope-o"></i>
+          <i className="fa-solid fa-envelope" aria-hidden="true"></i>
             <h3>Email</h3>
             <p>supporters.za@actionaid.org</p>
           </div>

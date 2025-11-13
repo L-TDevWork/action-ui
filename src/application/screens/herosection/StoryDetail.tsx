@@ -1,6 +1,6 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-
+import { Link, useParams } from 'react-router-dom';
+import { FaArrowLeft } from "react-icons/fa";
 import woman1 from "../../../assets/images/YUW-2-150x150.png";
 
 const dummyStories = [
@@ -82,14 +82,16 @@ const StoryDetail: React.FC = () => {
 
   if (!story) return <p>Story not found.</p>;
 
-  return (
-    <div className="story-details-container">
-      <div className="story-content">
-      <h1>{story.title}</h1>
-      <img src={story.image} alt={story.title} />
-      <p >{story.content}</p>
-    </div></div>
+   return (
+     <div className="story-details-container">
+       <div className="story-content">
+       <Link to="/stories" className="back-link"><FaArrowLeft /> Back to Stories
+      </Link>
+       <h1>{story.title}</h1>
+       <img src={story.image} alt={story.title} />
+       <p >{story.content}</p>
+     </div></div>
   );
-};
+ };
 
 export default StoryDetail;
