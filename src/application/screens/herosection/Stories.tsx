@@ -1,21 +1,15 @@
 import { type JSX } from "react";
-import { RedBoarder } from "../../../infrastructure/shared/redborder/RedBoarder";
 import StoryGrid from "./StoryGrid";
+import { RedBoarder } from "../../../infrastructure/shared/redborder/RedBoarder";
 
 
 export const Stories: React.FC<{}> = (): JSX.Element => {
-    return <>
-<div className="meet-the-team-container" style={{ marginTop: "10%" }}>
-<div className="team-content">
- <div className="hero-section">
-   
-        <h1>Stories</h1>
-          <RedBoarder />
-      </div>
-      <StoryGrid />
-</div>
- 
-</div>
-    </>
+    return <div className="meet-the-team-container">
+        <div className="team-content">
+            <h1>Stories</h1>
+            <RedBoarder />
+            <StoryGrid />
+        </div>
+    </div>
 }
 
